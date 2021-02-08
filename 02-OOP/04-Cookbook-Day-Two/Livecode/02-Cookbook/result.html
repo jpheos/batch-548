@@ -1,0 +1,2650 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+	<head>
+					
+
+
+<script type="text/javascript">
+window.gdprAppliesGlobally=true;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
+else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
+var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
+if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
+  var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("0f196fe5-c7e1-4613-9c62-9be54399d640")})();
+
+var showCmpPreferencesPopup = function(){ Didomi.preferences.show() };
+</script>
+
+
+
+
+			    
+	   
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-aedcd3c03fde7213bd0",applicationID:"790078044"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="format-detection" content="telephone=no">
+        <meta name="robots" content="max-snippet:-1">
+        <meta name="robots" content="max-image-preview:large">
+        <meta name="robots" content="max-video-preview:-1">
+		<title>Fraise : nos délicieuses recettes de fraise</title>
+<meta name="robots" content="index,&#x20;follow" />
+<script type="text/javascript" crossorigin="anonymous" src="https://static.afcdn.com/relmrtn/concat.js?PCM-hZBPawMhEMU_TY9Z1qWUXnoohZ5yKARyDeM6a2xGRxyXknz6KqV_LKY9KG98P2f07TEYTjfTc1y1rLoINdwN49fBRlywhJnD8CoP-09a85vgtxi8a31Yl7JbYg10mNl7DofMscPAsmVrS4uetUMRx93W0L3wAhZ3EdH80fTRaOL51HiR6bw4oiJnAhFykvsDOP76qofkXcmnypTDxrMBaogjBEOoIUlTNAzB5Szugj-kXEm1JFYIYjD_RV79J_aRA4ZcZyMYTFtnj7Va5SOg68TMfNJl1acO0zipcRrv1a1S7w"></script>
+<script type="text/javascript">var _eStat_Whap_loaded = 0;</script>
+<script type="text/javascript">Mrtn = Mrtn || {};
+ Mrtn.isRecipeType = { value : '' };
+ Mrtn.isRecipeSeasonal = {value : ''};</script>
+<script type="text/javascript">
+ var aufAdtechParams = {};
+
+ var sas_formatIds = '';
+ var sas_pageId = 19220;
+ var sas_dfpPageId = 'search';
+ var sas_target = '';
+ </script>
+<script type="application&#x2F;ld&#x2B;json">
+    
+    {"@context":"http://schema.org","@type":"ItemList","url":"https://www.marmiton.org/recettes/recherche.aspx?type=all&aqt=fraise","numberOfItems":10,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.marmiton.org/recettes/recette_confiture-de-fraise_25640.aspx"},{"@type":"ListItem","position":2,"url":"/recettes/index/ingredient/fraise"},{"@type":"ListItem","position":3,"url":"https://www.marmiton.org/recettes/recette_panacotta-a-la-fraise_10976.aspx"},{"@type":"ListItem","position":4,"url":"https://www.marmiton.org/recettes/recette_coulis-de-fraise_55249.aspx"},{"@type":"ListItem","position":5,"url":"/recettes/recette_batonnets-glaces-fraise-chocolat_371365.aspx"},{"@type":"ListItem","position":6,"url":"/recettes/selection_recette_fraise.aspx"},{"@type":"ListItem","position":7,"url":"https://www.marmiton.org/recettes/recette_smoothie-fraise-menthe_212490.aspx"},{"@type":"ListItem","position":8,"url":"https://www.marmiton.org/recettes/recette_gelee-de-fraise_71930.aspx"},{"@type":"ListItem","position":9,"url":"https://www.marmiton.org/recettes/recette_smoothie-banane-fraise_80171.aspx"},{"@type":"ListItem","position":10,"url":"/recettes/recette_sorbet-fraise-basilic-par-laurent-mariotte_527825.aspx"}]}
+    
+</script>
+<script type="text/javascript">af_translations = {};
+</script>
+<script type="text/javascript">
+ // add global random value from 1 to 100
+ var afGlobalRandomValue = Math.floor(Math.random() * 100) + 1;
+ // push see also event
+ var afSeeAlsoEnabled = afGlobalRandomValue % (100/10) == 0;
+ // To make other subdomains able to contact this page
+ if (document.domain && typeof(sas_ddotpos) == 'undefined') {
+ sas_ddotpos = document.domain.indexOf('.');
+ if (sas_ddotpos > 0) document.domain = document.domain.substr(sas_ddotpos + 1);
+ }
+</script>
+<script type="text/javascript">
+ window.afSession = window.afSession || new AufSession();
+ </script>
+<script type="text/javascript">
+ window.afLogger = window.afLogger || new Aflog.Logger({
+ context: {
+ revision: '9bae979b49432d3b0e81755a9b256addd9c0d527'
+ }
+ });
+ af_addEvent(window, 'beforeunload', function() {
+ afLogger.sendLogsToBigQuery();
+ }, false);
+ </script>
+<script type="text/javascript">
+ var m_isConnected = (af_getCookie('MARMICOOK') != '') ? 1 : 0;
+ var m_userInfo = {
+ 'hashedUserId': (m_isConnected && Mrtn && Mrtn.cookbooks && Mrtn.cookbooks.cookbooks && Mrtn.cookbooks.cookbooks.UserInfos && Mrtn.cookbooks.cookbooks.UserInfos.HashedUserId) ? Mrtn.cookbooks.cookbooks.UserInfos.HashedUserId : '',
+ 'newsletter': (m_isConnected && Mrtn && Mrtn.cookbooks && Mrtn.cookbooks.cookbooks && Mrtn.cookbooks.cookbooks.UserInfos && Mrtn.cookbooks.cookbooks.UserInfos.Newsletter) ? Mrtn.cookbooks.cookbooks.UserInfos.Newsletter : ''
+ }
+ </script>
+<script type="text/javascript">
+ if (location.hash && location.hash.toLowerCase().substr(0, 5) == '#via=') {
+ var via = location.hash.substr(5).split('::');
+ if (via.length == 3) document.location.hash = 'utm_campaign='+via[0]+'&utm_medium='+via[1]+'&utm_source='+via[2];
+ };</script>
+<script type="text/javascript">
+ var af_winSize = af_windowSize();
+ </script>
+<script type="text/javascript">
+ var af_consentInternetTargeting = true; // @TODO to remove, no longer reliable
+ var af_consentAdsTargeting = true; // @TODO to remove, no longer reliable
+ </script>
+<script type="text/javascript">m_dataLayer = [{
+ 'vuid': af_guid(),
+ 'siteInfo': {
+ 'sid': 13,
+ 'platform': 'marmiton',
+ 'uaid': 'UA-1901803-10',
+ 'optimizeId': '0',
+ 'lang': 'fr',
+ 'isMobile': 0,
+ 'gemkey': 'none',
+ 'applicationType': 'default'
+ },
+ 'pageInfo': {
+ 'trackPageview': 1,
+ 'rid': 0,
+ 'srid': 0,
+ 'sec': 'none / none',
+ 'version' : 'new',
+ 'contentType': 'recherche',
+ 'ops': 'none',
+ 'ops_uaid': 'none',
+ 'section': 'none',
+ 'subsection': 'none',
+ 'thematic': '',
+ 'tag': '',
+ 'tags': 'none',
+ 'adstack': 'legacy',
+ 'category': 'all'
+ 
+ },
+ 'userInfo': {
+ 'du': 'none',
+ 'logged': m_isConnected,
+ 'device': 'desktop',
+ 'hashedUserId': m_userInfo.hashedUserId,
+ 'referer': document.referrer,
+ 'userAgent': navigator.userAgent,
+ 'adblocker': 'N/A',
+ 'segment': afSession.getSegment(),
+ 'screenResolution': af_winSize.w + 'x' + af_winSize.h,
+ 'adb': '',
+ 'newsletters': m_userInfo.newsletter,
+ 'consentInternetTargeting': (af_consentInternetTargeting ? 1 : 0),
+ 'consentAdsTargeting': (af_consentAdsTargeting ? 1 : 0)
+ },
+ 'campaignInfo': {
+ 'utmSource': afSession.getUtmSource(),
+ 'utmMedium': afSession.getUtmMedium(),
+ 'utmCampaign': afSession.getUtmCampaign(),
+ 'paid' : afSession.isPaid() ? 1 : 0
+ }}];
+ </script>
+<script type="text/javascript">m_dataLayer[0].pageInfo = m_dataLayer[0].pageInfo || {};</script>
+<script type="text/javascript">m_dataLayer[0].pageInfo.additional = 'fraise'</script>
+<script type="text/javascript">
+ var af_dataLayer = m_dataLayer;
+ </script>
+<script type="text/javascript">unify_dataSlayer = [{"page":{"section":"none","subSection":"none","mainTag":"none","sectionId":0,"subSectionId":0,"trackPageview":1}},{"content":{"type":"recherche"}},{"site":{"platform":"marmiton","lang":"fr","sid":13,"environment":"production"}},{"user":{"id":m_userInfo.hashedUserId,"dom":"none","device":"desktop","screenResolution":af_winSize.w + 'x' + af_winSize.h,"referer":document.referrer,"segment":afSession.getSegment(),"adBlocker":"N\/A","isMobile":0,"userAgent":navigator.userAgent,"isLoggedIn":m_isConnected,"paid":afSession.isPaid() ? 1 : 0}},{"ops":{"name":"none","brand":"none","uaid":"none"}},{"utm":{"campaign":afSession.getUtmCampaign(),"medium":afSession.getUtmMedium(),"source":afSession.getUtmSource()}}]</script>
+<script type="text/javascript">
+ PubSub.subscribeOnce('ad.block.detect', function(msg, data) {
+ af_setValueToDatalayer('user', 'adBlocker', (data.status ? 1 : 0));
+ PubSub.publish('datalayer.ready', { datalayer: m_dataLayer[0] });
+ });
+ </script>
+<script type="text/javascript">
+ afLogger.setDataLayer(m_dataLayer[0]);
+ </script>
+<script type="text/javascript">
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+ new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+ "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,"script","unify_dataSlayer","GTM-MX2D67");</script>
+<script type="text/javascript">
+ sas_target = (window.sas_target ? sas_target : '') + ';searchterm=fraise;contenttype=recherche;site=13s;version=desktop;platform=desktop;';
+ </script>
+<script type="text/javascript">aufAdtechParams = {"exclusivesAdsFormats":null,"formatIds":"300_atf,banner_atf,banner_btf,dhtml","pageId":"search","placeholders":{"300_atf":{"hasRefresh":true,"refreshParams":{"mode":"auto","refreshAdsInterval":15000}}}}; </script>
+<script type="text/javascript">
+ if (Math.random() < 0.1) {
+ (function() {
+ function hsLogError(message, category, sampling) {
+ var d = message.split('').reverse().join('');
+ new Image().src = 'https://www.marmiton.org/reloaded/errpix.php?'
+ + 'd=' + encodeURIComponent(d)
+ + (sampling ? '&s=' + sampling : '')
+ + (category ? '&c=' + encodeURIComponent(category) : '');
+ if (window.console && console.error) console.error('JS Catchall: ' + message);
+ }
+
+ var af_JsElementBlocked = false;
+ var af_nbErrorsToReport = 10;
+ window.onerror = function(message, url, line, column, error) {
+ if (af_nbErrorsToReport-- < 0) return;
+
+ var category = 'JS - window.onerror';
+
+ if (typeof message === 'string') {
+ if (message.indexOf('Script error') !== -1) {
+ category += ' - external';
+ }
+
+ if (url && url.indexOf(document.domain) === -1) {
+ message += ' @ ' + url;
+ if (typeof line !== undefined) {
+ message += ':' + line;
+ }
+ if (typeof column !== undefined) {
+ message += ':' + column;
+ }
+ }
+ } else if (typeof message == 'object' && message.srcElement && message.target) {
+ if (message.srcElement == '[object HTMLScriptElement]' && message.target == '[object HTMLScriptElement]') {
+ message = 'Error loading script';
+ } else {
+ message = 'Event Error - target:' + message.target + ' srcElement:' + message.srcElement;
+ af_JsElementBlocked = true;
+ }
+ } else if (typeof message == 'object') {
+ message = 'MESSAGE_OBJECT: ' + message.constructor.name;
+ } else {
+ message = 'MESSAGE_NOSTRING: ' + typeof message;
+ }
+
+ hsLogError(message, category);
+
+ return true;
+ };
+
+ var af_taggingToReport = true;
+ function checkTagging() {
+ if (!af_taggingToReport) return;
+ af_taggingToReport = false;
+ if (window.top != window.self) return; // Iframe
+ if (af_JsElementBlocked) return; // Errors when loading page
+
+ if (!window.af_dataLayer && window.location.href.indexOf('doctissimo.fr') === -1) {
+ hsLogError('GTM data layer missing', 'GTM', 1);
+ }
+ if (!window.af_ua_trackEvent) {
+ hsLogError('UA track event function missing', 'GTM', 1);
+ }
+ }
+
+ if (window.addEventListener) {
+ window.addEventListener('load', checkTagging, false);
+ } else if (window.attachEvent) {
+ window.attachEvent('onload', checkTagging);
+ }
+ })();
+ }</script>
+<!-- ESI ADS :  https://www.marmiton.org/reloaded/esi/ads?adstack=legacy&device=desktop&domuser=&issomtag=false&jwpnewversion=false&keywords=&source=organic -->
+<link href="https&#x3A;&#x2F;&#x2F;tlx.3lift.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;fastlane.rubiconproject.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;ib.adnxs.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;c.amazon-adsystem.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;hb-api.omnitagjs.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;cdn.jsdelivr.net" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;securepubads.g.doubleclick.net&#x2F;tag&#x2F;js&#x2F;gpt.js" rel="preload" as="script">
+<link href="https&#x3A;&#x2F;&#x2F;adservice.google.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;adservice.google.fr" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;securepubads.g.doubleclick.net" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;pubads.g.doubleclick.net" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;www.googletagservices.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;blog.marmiton.org" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;www.marmiton.org" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;static.afcdn.com" rel="preconnect">
+<link href="https&#x3A;&#x2F;&#x2F;assets.afcdn.com" rel="preconnect">
+<script type="text/javascript" crossorigin="anonymous" src="https://static.afcdn.com/relmrtn/concat.js?PCM-lVLLasMwEPyaHiv8gIQeegiBXPrAJCVXI1trRbWsNVo5j7-vUrcpBjuVL8tod2a00u4ejED7kGzarqCu8CBmCxbdEo-kjNTg0LBPet7_sgs8EfwB1qhhnXeVj1JjwXVeYtOgyR22IxxevaKU3mKstAMihWPWXNC1RwuFEn0y-8bTZkNBD1KWLFk0w36NplJyhuCNG363Id1JZajPflhe1v6_M3UGTZMaH8EewV5x7gurn3OQQFTtv_xBU_7JDox7gcsJraDxOTlV1pc16jvVsNvmcDNuudb8HMbeYNlRGHULlQU6hJHfuVNHWIlA712tpve5H-Zth1kSJXGURGm8SJ--AA"></script>
+<script type="text/javascript">
+ function loadSublimeSkinz() {
+ var s = document.createElement('script');
+ s.type = 'text/javascript';
+ s.async = true;
+ s.src = 'https://sac.ayads.co/sublime/24178/prebid';
+ document.getElementsByTagName('head')[0].appendChild(s);
+ }
+
+ (function() {
+ window.didomiEventListeners = window.didomiEventListeners || [];
+ window.didomiEventListeners.push({
+ event: 'consent.changed',
+ listener: function () {
+ if (Didomi.getUserConsentStatusForVendor(114) === true) {
+ loadSublimeSkinz();
+ }
+ }
+ });
+
+ window.didomiOnReady = window.didomiOnReady || [];
+ window.didomiOnReady.push(function showAdsWhenCMPisReady(Didomi) {
+ if (Didomi.getUserConsentStatusForVendor(114) === true) {
+ loadSublimeSkinz();
+ }
+ });
+ })();
+ </script>
+<script type="text/javascript">
+ window.afSession = window.afSession || new AufSession();
+ </script>
+<script type="text/javascript">
+ window.afLogger = window.afLogger || new Aflog.Logger({
+ context: {
+ revision: 'abc61b03e19c8e324a1714195f97fb89b5e41e20'
+ }
+ });
+ af_addEvent(window, 'beforeunload', function() {
+ afLogger.sendLogsToBigQuery();
+ }, false);
+ </script>
+<script type="text/javascript">
+ sas_target += ';adstack=legacy;';
+ window.aufAdtechParams = window.aufAdtechParams || {};
+ aufAdtechParams.domUser = '';
+ aufAdtechParams.isMobile = false;
+ aufAdtechParams.target = sas_target || '';
+ aufAdtechParams.adxAdjustedCpms = {"marmiton\/video\/preroll_ATF":{"ad_unit_id":21665742699,"ad_unit_path":"marmiton\/video\/preroll_ATF","cpm_1_day":6.6952000191343135,"cpm_7_days":6.3294034555237921},"marmiton\/organic\/recipes\/banner_btf":{"ad_unit_id":21727356482,"ad_unit_path":"marmiton\/organic\/recipes\/banner_btf","cpm_1_day":0.52745502186403026,"cpm_7_days":0.51369186036714687},"marmiton\/organic\/search\/banner_atf":{"ad_unit_id":21727444338,"ad_unit_path":"marmiton\/organic\/search\/banner_atf","cpm_1_day":0.82560181556642931,"cpm_7_days":0.66552899950684818},"marmiton\/organic\/others\/banner_atf":{"ad_unit_id":21727356893,"ad_unit_path":"marmiton\/organic\/others\/banner_atf","cpm_1_day":2.3826960575184657,"cpm_7_days":0.80460209041860076},"marmiton\/organic\/expert_club\/300_atf":{"ad_unit_id":21734540788,"ad_unit_path":"marmiton\/organic\/expert_club\/300_atf","cpm_1_day":1.8439137615885652,"cpm_7_days":1.8468023282183659},"marmiton\/organic\/others\/300_diapodynamic":{"ad_unit_id":21734539501,"ad_unit_path":"marmiton\/organic\/others\/300_diapodynamic","cpm_1_day":1.534761022335454,"cpm_7_days":1.7487821426716519},"marmiton\/organic\/search\/300_btf":{"ad_unit_id":21734235404,"ad_unit_path":"marmiton\/organic\/search\/300_btf","cpm_1_day":0.51022087391416815,"cpm_7_days":0.49417744119290585},"marmiton\/organic\/homepage\/300_mtf":{"ad_unit_id":21749837067,"ad_unit_path":"marmiton\/organic\/homepage\/300_mtf","cpm_1_day":0.56633114326596967,"cpm_7_days":0.58812913837787173},"marmiton\/organic\/others\/dhtml":{"ad_unit_id":21733566912,"ad_unit_path":"marmiton\/organic\/others\/dhtml","cpm_1_day":7.6249227258468748,"cpm_7_days":8.6732061864723704},"marmiton\/organic\/recipes\/banner_atf":{"ad_unit_id":21727444506,"ad_unit_path":"marmiton\/organic\/recipes\/banner_atf","cpm_1_day":0.99329144781508161,"cpm_7_days":0.59356145713233077},"marmiton\/organic\/homepage\/banner_atf":{"ad_unit_id":21725394400,"ad_unit_path":"marmiton\/organic\/homepage\/banner_atf","cpm_1_day":0.46253265441726943,"cpm_7_days":0.47428522778237803},"marmiton\/organic\/others\/300_btf":{"ad_unit_id":21734232959,"ad_unit_path":"marmiton\/organic\/others\/300_btf","cpm_1_day":0.60393720265836082,"cpm_7_days":0.53975280966447337},"marmiton\/organic\/search\/banner_btf":{"ad_unit_id":21727444377,"ad_unit_path":"marmiton\/organic\/search\/banner_btf","cpm_1_day":0.47742807317792518,"cpm_7_days":0.49356433626819868},"marmiton\/video\/preroll_MTF_content":{"ad_unit_id":21665742708,"ad_unit_path":"marmiton\/video\/preroll_MTF_content","cpm_1_day":6.096342363596178,"cpm_7_days":6.2472260110167719},"marmiton\/organic\/recipes\/banner_mtf":{"ad_unit_id":21749840757,"ad_unit_path":"marmiton\/organic\/recipes\/banner_mtf","cpm_1_day":0.40769964324049585,"cpm_7_days":0.41474177420484964},"marmiton\/organic\/others\/dyninfeed":{"ad_unit_id":21929114326,"ad_unit_path":"marmiton\/organic\/others\/dyninfeed","cpm_1_day":1.3312090261278304,"cpm_7_days":1.3148703606407566},"marmiton\/organic\/recipes\/native_recipe_center":{"ad_unit_id":21734545204,"ad_unit_path":"marmiton\/organic\/recipes\/native_recipe_center","cpm_1_day":0.52773610076920685,"cpm_7_days":0.64319288927045382},"marmiton\/video\/preroll_BTF":{"ad_unit_id":21665742705,"ad_unit_path":"marmiton\/video\/preroll_BTF","cpm_1_day":5.4146295115262495,"cpm_7_days":5.4806642351851753},"marmiton\/organic\/recipes\/300_mtf":{"ad_unit_id":21734544763,"ad_unit_path":"marmiton\/organic\/recipes\/300_mtf","cpm_1_day":1.3182150614531745,"cpm_7_days":1.3636314972519952},"marmiton\/organic\/expert_club\/banner_atf":{"ad_unit_id":21727606120,"ad_unit_path":"marmiton\/organic\/expert_club\/banner_atf","cpm_1_day":5.2366765358265406,"cpm_7_days":0.90754100182419073},"marmiton\/organic\/expert_club\/banner_btf":{"ad_unit_id":21727614889,"ad_unit_path":"marmiton\/organic\/expert_club\/banner_btf","cpm_1_day":0.63482989170707393,"cpm_7_days":0.51971663431131365},"marmiton\/organic\/recipes\/native_shopping":{"ad_unit_id":21734545255,"ad_unit_path":"marmiton\/organic\/recipes\/native_shopping","cpm_1_day":0.6884834267192409,"cpm_7_days":0.77170565683825598},"marmiton\/organic\/others\/300_atf":{"ad_unit_id":21734539498,"ad_unit_path":"marmiton\/organic\/others\/300_atf","cpm_1_day":2.1012470783768151,"cpm_7_days":2.0268248907122737},"marmiton\/organic\/recipes\/300_atf":{"ad_unit_id":21734240033,"ad_unit_path":"marmiton\/organic\/recipes\/300_atf","cpm_1_day":2.1757405888686003,"cpm_7_days":2.0261943014162087},"marmiton\/organic\/recipes\/300_btf":{"ad_unit_id":21734544592,"ad_unit_path":"marmiton\/organic\/recipes\/300_btf","cpm_1_day":0.56220075181044371,"cpm_7_days":0.52430404831533861},"marmiton\/video\/preroll_MTF_seealso":{"ad_unit_id":21665741655,"ad_unit_path":"marmiton\/video\/preroll_MTF_seealso","cpm_1_day":6.6303494044564069,"cpm_7_days":6.1901494404130117},"marmiton\/organic\/homepage\/300_atf":{"ad_unit_id":21734236838,"ad_unit_path":"marmiton\/organic\/homepage\/300_atf","cpm_1_day":0.99894961784081848,"cpm_7_days":1.0966109262082484},"marmiton\/organic\/others\/banner_btf":{"ad_unit_id":21727616785,"ad_unit_path":"marmiton\/organic\/others\/banner_btf","cpm_1_day":0.52761118638846249,"cpm_7_days":0.53521287413996876},"marmiton\/organic\/search\/300_mtf":{"ad_unit_id":21734541130,"ad_unit_path":"marmiton\/organic\/search\/300_mtf","cpm_1_day":0.76516101945394188,"cpm_7_days":0.78381449031988237},"marmiton\/organic\/search\/300_atf":{"ad_unit_id":21734541475,"ad_unit_path":"marmiton\/organic\/search\/300_atf","cpm_1_day":1.5980386161061915,"cpm_7_days":1.6169940412160009},"marmiton\/organic\/recipes\/300_diapodynamic":{"ad_unit_id":21734544712,"ad_unit_path":"marmiton\/organic\/recipes\/300_diapodynamic","cpm_1_day":2.2824716852109885,"cpm_7_days":2.2678699103271351}};
+
+ if (!aufAdtechParams.formatIds) {
+ aufAdtechParams.formatIds = window.sas_formatIds || '';
+ } else if (!window.sas_formatIds) {
+ sas_formatIds = aufAdtechParams.formatIds;
+ }
+ </script>
+<script type="text/javascript">
+ aufAdtechParams.adUnitPath = '/229683329/marmiton/organic';
+ aufAdtechParams.adUnitPathHbForced = '/229683329/marmiton/content_marketing';
+ aufAdtechParams.formatMapping = {"banner_atf":{"id":"banner_atf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["1x1","728x90","800x250","840x150","970x250","980x250","1000x90","1000x250","1020x250","1800x1000"]},"banner_atf_small":{"id":"banner_atf_small","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1","728x90","1000x90"]},"banner_mtf":{"id":"banner_mtf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["1x1","728x90","800x250","970x250","990x90","1000x90","1000x250","1020x250"]},"banner_mtf_small":{"id":"banner_mtf_small","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["728x90"]},"banner_btf":{"id":"banner_btf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["1x1","728x90","950x90","970x90","990x90","1000x90"]},"300_atf":{"id":"300_atf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["120x600","160x600","300x250","300x600"]},"300_mtf":{"id":"300_mtf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1","300x250"]},"300_mtf_2":{"id":"300_mtf_2","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["300x250"]},"300_mtf_3":{"id":"300_mtf_3","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["300x250"]},"300_btf":{"id":"300_btf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["300x250"]},"300_diapodynamic":{"id":"300_diapodynamic","hasLabel":false,"isAsync":true,"isCentered":true,"sizes":["120x600","160x600","300x250","300x600"]},"sitebar_left":{"id":"sitebar_left","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["120x600","160x600"]},"sitebar_right":{"id":"sitebar_right","hasLabel":false,"isAsync":false,"isCentered":false,"sizes":["120x600","160x600"]},"native_home_dynamic":{"id":"native_home_dynamic","hasLabel":false,"isAsync":false,"isCentered":false,"sizes":["fluid","1x1"]},"native_seealso_right":{"id":"native_seealso_right","hasLabel":false,"isAsync":false,"isCentered":false,"sizes":["fluid","1x1"]},"native_seealso_left":{"id":"native_seealso_left","hasLabel":true,"isAsync":false,"isCentered":false,"sizes":["fluid","1x1"]},"inread":{"id":"inread","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["1x1"]},"dhtml":{"id":"dhtml","hasLabel":false,"isAsync":false,"isCentered":false,"sizes":["1x1","320x480"]},"native_seealso":{"id":"native_seealso","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1"]},"native_recipe_center":{"id":"native_recipe_center","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1"]},"native_shopping":{"id":"native_shopping","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1","229x240"]},"native_block_left":{"id":"native_block_left","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1"]},"native_block_right":{"id":"native_block_right","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1"]},"300_newsletter":{"id":"300_newsletter","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["300x250"]},"native_article_center":{"id":"native_article_center","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","1x1"]},"dyninfeed":{"id":"dyninfeed","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["fluid","300x250","1x1"]},"preroll_atf":{"id":"preroll_atf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["640x480v"]},"preroll_btf":{"id":"preroll_btf","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["640x480v"]},"preroll_mtf_content":{"id":"preroll_mtf_content","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["640x480v"]},"preroll_mtf_seealso":{"id":"preroll_mtf_seealso","hasLabel":false,"isAsync":false,"isCentered":true,"sizes":["640x480v"]}};
+ </script>
+<script type="text/javascript">
+ window.afAd = new AufAds.DFPAdserver(aufAdtechParams);
+ afAd.initQueue();
+ </script>
+<script type="text/javascript">
+ (function() {
+ var s = document.createElement('script');
+ s.type = 'text/javascript';
+ s.async = true;
+ s.src = 'https://boot.pbstck.com/v1/tag/bff46cdb-3c4d-4c5c-beb8-5f215129fff5';
+ document.getElementsByTagName('head')[0].appendChild(s);
+ })();
+ </script>
+<script type="text/javascript">
+ if (!window.aufHBDisabled) {
+ if (window.aufbidjs) {
+ afLogger.logError('HB already initialized', 'HB');
+ } else if (!window.AufPrebid) {
+ afLogger.logError('AufPrebid library not defined', 'HB');
+ } else {
+ window.aufbidjsParams = {
+ data: {"formats":{"300_atf":{"asyncOnly":false,"position":"ATF"},"300_diapodynamic":{"asyncOnly":true,"position":"ATF"},"banner_atf":{"asyncOnly":false,"position":"ATF"},"dyninfeed":{"asyncOnly":false,"position":"MTF"},"300_btf":{"asyncOnly":false,"position":"BTF"},"300_mtf":{"asyncOnly":true,"position":"MTF"},"300_mtf_3":{"asyncOnly":false,"position":"MTF"},"banner_btf":{"asyncOnly":false,"position":"BTF"},"banner_mtf":{"asyncOnly":false,"position":"MTF"},"preroll_mtf_content":{"asyncOnly":false,"position":"MTF"}},"accounts":[{"name":"AUF - AdYouLike","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"adyoulike","accountId":"","siteId":null,"currency":"USD","deal_commission":10,"open_commission":10,"adjustment":0,"grossRevenue":1,"placements":{"300_atf":[{"tag":"116a292b9204bec02e0f17407061eb73","size":"300x250"},{"tag":"71475320f251bd5294fc2f1429940e4b","size":"300x600"}],"300_diapodynamic":[{"tag":"f1ee3f3d2e781600e710e3ecd0ff609c","size":"300x600"},{"tag":"f727e3fe4cd6a91f8ab5b304f2a5c64a","size":"300x250"}],"banner_atf":[{"tag":"218b0c503df509cd99400cfb907102a6","size":"970x250"}],"dyninfeed":[{"tag":"54911187e9b21505fe48b7d162c786f8","size":"300x250"}]}},{"name":"AUF - Amazon","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"amazon","accountId":"3357","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":-3,"grossRevenue":0,"placements":{"300_atf":[{"tag":"1","size":"160x600,300x600,300x250"}],"300_diapodynamic":[{"tag":"1","size":"160x600,300x600"},{"tag":"1","size":"300x250"}],"banner_atf":[{"tag":"1","size":"728x90,970x250"}],"dyninfeed":[{"tag":"1","size":"300x250"}]}},{"name":"AUF - AppNexus","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"appnexus","accountId":"7695","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":1,"grossRevenue":0,"placements":{"300_atf":[{"tag":"11317811","size":"300x600,300x250,160x600,120x600"}],"300_diapodynamic":[{"tag":"12331751","size":"300x600,160x600,120x600,300x250"}],"banner_atf":[{"tag":"11317810","size":"970x250,1000x90,728x90,1800x1000,1000x300"}],"dyninfeed":[{"tag":"18593380","size":"300x250"}]}},{"name":"AUF - Criteo","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"criteo","accountId":"6710","siteId":null,"currency":"EUR","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"300_atf":[{"tag":"846863","size":"300x600"}],"300_diapodynamic":[{"tag":"846860","size":"300x600"}],"banner_atf":[{"tag":"846866","size":"970x250"}],"dyninfeed":[{"tag":"1501826","size":"300x250"}]}},{"name":"AUF - IAS","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"ias","accountId":"929475","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"300_atf":[{"tag":"300_atf","size":"300x250"}],"300_diapodynamic":[{"tag":"300_diapodynamic_desktop","size":"300x250"}],"banner_atf":[{"tag":"banner_atf","size":"1800x1000"}]}},{"name":"AUF - IndexExchange","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"ix","accountId":"184403","siteId":"187993","currency":"EUR","deal_commission":0,"open_commission":0,"adjustment":-10,"grossRevenue":0,"placements":{"300_atf":[{"tag":"187994","size":"300x250,300x600,120x600,160x600"}],"300_diapodynamic":[{"tag":"223321","size":"300x600,120x600,160x600,300x250"}],"banner_atf":[{"tag":"386229","size":"1800x1000"},{"tag":"187993","size":"970x250,1000x90,728x90,1000x300"}],"dyninfeed":[{"tag":"468796","size":"300x250"}]}},{"name":"AUF - InVibes","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"invibes","accountId":"","siteId":null,"currency":"EUR","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"dyninfeed":[{"tag":"invibes_marmiton","size":"300x250"}]}},{"name":"AUF - JustPremium","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"justpremium","accountId":"","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"banner_atf":[{"tag":"47127","size":"1800x1000"}]}},{"name":"AUF - Pubmatic","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"pubmatic","accountId":"157997","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":-1,"grossRevenue":0,"placements":{"300_atf":[{"tag":"1958994","size":"160x600,120x600,300x250,300x600"}],"300_diapodynamic":[{"tag":"1959009","size":"160x600,120x600,300x250,300x600"}],"banner_atf":[{"tag":"2475834","size":"970x250,1000x90,1000x300,728x90"}],"dyninfeed":[{"tag":"549404","size":"300x250"}]}},{"name":"AUF - Rubicon","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"rubicon","accountId":"12982","siteId":"52248","currency":"USD","deal_commission":0,"open_commission":0,"adjustment":-8,"grossRevenue":0,"placements":{"300_atf":[{"tag":"237920","size":"300x600,300x250,120x600,160x600"}],"300_diapodynamic":[{"tag":"756660","size":"300x600,300x250,120x600,160x600"}],"banner_atf":[{"tag":"237920","size":"728x90,1000x300,1000x90,970x250,1800x1000"}],"dyninfeed":[{"tag":"1593578","size":"300x250"}]}},{"name":"AUF - Smart RTB+","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"smartadserver","accountId":"","siteId":"2613","currency":"EUR","deal_commission":9.5,"open_commission":9.5,"adjustment":1,"grossRevenue":1,"placements":{"300_atf":[{"tag":"12","size":"300x600,300x250,120x600,160x600"}],"300_diapodynamic":[{"tag":"16863","size":"300x600,120x600,160x600,300x250"}],"banner_atf":[{"tag":"117","size":"970x250,1000x90,1000x300,728x90"}],"dyninfeed":[{"tag":"87699","size":"300x250"}]}},{"name":"AUF - SublimeSkinz","online_desktop":1,"online_mobile":0,"aliasBidder":"","bidder":"sublime","accountId":"24178","siteId":null,"currency":"EUR","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"banner_atf":[{"tag":"24178","size":"1800x1000"}]}},{"name":"AUF - TripleLift","online_desktop":1,"online_mobile":1,"aliasBidder":"","bidder":"triplelift","accountId":"3610","siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":0,"grossRevenue":0,"placements":{"300_atf":[{"tag":"AuFeminin_Marmiton_ATF_Desktop","size":"300x250,300x600"},{"tag":"AuFeminin_Marmiton_HDX","size":"300x250,300x600,120x600,160x600"}],"300_diapodynamic":[{"tag":"AuFeminin_Marmiton_Diapo_Desktop","size":"300x250,300x600"},{"tag":"AuFeminin_Marmiton_HDX","size":"300x250,300x600"}],"banner_atf":[{"tag":"AuFeminin_Marmiton_HDX","size":"970x250"},{"tag":"AuFeminin_Marmiton_Desktop_Billboard","size":"970x250,728x90"}],"dyninfeed":[{"tag":"AuFeminin_marmiton_DynInfeed_Desktop","size":"300x250"},{"tag":"AuFeminin_Marmiton_HDX","size":"300x250"}]}},{"name":"AUF - Mediasquare - AppNexus - Classic","online_desktop":1,"online_mobile":1,"aliasBidder":"appnexus","bidder":"msapnx","accountId":null,"siteId":null,"currency":"USD","deal_commission":20,"open_commission":20,"adjustment":0,"grossRevenue":1,"placements":{"300_atf":[{"tag":"18380001","size":"300x250,300x600,160x600,120x600"}],"300_diapodynamic":[{"tag":"18380003","size":"300x250,300x600,160x600,120x600"}],"banner_atf":[{"tag":"18380009","size":"728x90,970x250,1800x1000"}],"dyninfeed":[{"tag":"18862396","size":"300x250"}]}},{"name":"AUF - Mediasquare - AppNexus - Max","online_desktop":1,"online_mobile":1,"aliasBidder":"appnexus","bidder":"msapmx","accountId":"7695","siteId":null,"currency":"USD","deal_commission":20,"open_commission":20,"adjustment":0,"grossRevenue":1,"placements":{"300_atf":[{"tag":"18380002","size":"300x250,300x600,160x600,120x600"}],"300_diapodynamic":[{"tag":"18380004","size":"300x250,300x600,160x600,120x600"}],"banner_atf":[{"tag":"18380010","size":"728x90,970x250,1800x1000"}],"dyninfeed":[{"tag":"18862400","size":"300x250"}]}},{"name":"AUF - Mediasquare - Rubicon","online_desktop":1,"online_mobile":1,"aliasBidder":"rubicon","bidder":"msrbcn","accountId":"9585","siteId":"308132","currency":"USD","deal_commission":20,"open_commission":20,"adjustment":null,"grossRevenue":1,"placements":{"300_atf":[{"tag":"1557134","size":"300x250,300x600,160x600,120x600"}],"300_diapodynamic":[{"tag":"1557136","size":"300x250,300x600,160x600,120x600"}],"banner_atf":[{"tag":"1557144","size":"728x90,970x250,1800x1000"}],"dyninfeed":[{"tag":"1626492","size":"300x250"}]}},{"name":"AUF - Freewheel","online_desktop":1,"online_mobile":0,"aliasBidder":null,"bidder":"freewheel-ssp","accountId":null,"siteId":"","currency":"EUR","deal_commission":30,"open_commission":30,"adjustment":null,"grossRevenue":1,"placements":{"preroll_mtf_content":[{"tag":"12485297","size":"640x480v","context":"instream"}]}},{"name":"AUF - Rich Audience","online_desktop":1,"online_mobile":1,"aliasBidder":null,"bidder":"richaudience","accountId":null,"siteId":null,"currency":"USD","deal_commission":0,"open_commission":0,"adjustment":null,"grossRevenue":null,"placements":{"300_atf":[{"tag":"hKIlWyHhIj","size":"300x250,300x600,120x600,160x600"}],"300_diapodynamic":[{"tag":"w6u9r7noVe","size":"300x250,300x600,120x600,160x600"}],"banner_atf":[{"tag":"u8sIgzksar","size":"970x250,728x90"},{"tag":"eZaJxL2Hf1","size":"1800x1000"}],"dyninfeed":[{"tag":"pig9cCm5y7","size":"300x250"}]}}]},
+ isMobile: false,
+ currenciesRates: {"ARS":0.015170599999999999,"CAD":0.65049100000000004,"GBP":1.13449,"MXN":0.041289899999999997,"USD":0.83215399999999995},
+ floorPrices: {"300_atf_300x250":0.65000000000000002,"banner_atf_970x250":2,"300_atf_300x600":0.65000000000000002,"banner_atf_728x90":0.14999999999999999,"banner_atf":0.14999999999999999,"300_btf":0.20000000000000001,"300_atf_160x600":0.65000000000000002,"300_diapodynamic":0.25,"banner_btf":0.20000000000000001,"banner_atf_1800x1000":5,"banner_atf_1000x90":0.14999999999999999,"300_atf":0.65000000000000002,"300_atf_120x600":0.65000000000000002,"300_mtf":0.20000000000000001,"banner_atf_1x1":5,"dyninfeed":0.5},
+ domUser: ''
+ };
+ window.aufbidjs = AufPrebid.Manager;
+ window.aufbidjs.init(aufbidjsParams);
+ }
+ }
+
+ if (!window.AufTrackingPixels) {
+ afLogger.logError('AufTrackingPixels library not defined', 'ads');
+ } else {
+ AufTrackingPixels.init({
+ isMobile: false,
+ });
+ }
+ </script>
+<script type="text/javascript">
+ var unfyHbVideoHandlerFinale = false;
+ var unfyHbVideoHandler = function(playerId, vastUrl) {
+ window.unfyHbVideos = window.unfyHbVideos || [];
+ window.unfyHbVideos.push({playerId: playerId, url: vastUrl});
+ };
+ </script>
+<script type="text/javascript">
+ if (Math.random() < 0.1) {
+ (function() {
+ function hsLogError(message, category, sampling) {
+ var d = message.split('').reverse().join('');
+ new Image().src = 'https://www.marmiton.org/reloaded/errpix.php?'
+ + 'd=' + encodeURIComponent(d)
+ + (sampling ? '&s=' + sampling : '')
+ + (category ? '&c=' + encodeURIComponent(category) : '');
+ if (window.console && console.error) console.error('JS Catchall: ' + message);
+ }
+
+ var af_JsElementBlocked = false;
+ var af_nbErrorsToReport = 10;
+ window.onerror = function(message, url, line, column, error) {
+ if (af_nbErrorsToReport-- < 0) return;
+
+ var category = 'JS - window.onerror';
+
+ if (typeof message === 'string') {
+ if (message.indexOf('Script error') !== -1) {
+ category += ' - external';
+ }
+
+ if (url && url.indexOf(document.domain) === -1) {
+ message += ' @ ' + url;
+ if (typeof line !== undefined) {
+ message += ':' + line;
+ }
+ if (typeof column !== undefined) {
+ message += ':' + column;
+ }
+ }
+ } else if (typeof message == 'object' && message.srcElement && message.target) {
+ if (message.srcElement == '[object HTMLScriptElement]' && message.target == '[object HTMLScriptElement]') {
+ message = 'Error loading script';
+ } else {
+ message = 'Event Error - target:' + message.target + ' srcElement:' + message.srcElement;
+ af_JsElementBlocked = true;
+ }
+ } else if (typeof message == 'object') {
+ message = 'MESSAGE_OBJECT: ' + message.constructor.name;
+ } else {
+ message = 'MESSAGE_NOSTRING: ' + typeof message;
+ }
+
+ hsLogError(message, category);
+
+ return true;
+ };
+
+ var af_taggingToReport = true;
+ function checkTagging() {
+ if (!af_taggingToReport) return;
+ af_taggingToReport = false;
+ if (window.top != window.self) return; // Iframe
+ if (af_JsElementBlocked) return; // Errors when loading page
+
+ if (!window.af_dataLayer && window.location.href.indexOf('doctissimo.fr') === -1) {
+ hsLogError('GTM data layer missing', 'GTM', 1);
+ }
+ if (!window.af_ua_trackEvent) {
+ hsLogError('UA track event function missing', 'GTM', 1);
+ }
+ }
+
+ if (window.addEventListener) {
+ window.addEventListener('load', checkTagging, false);
+ } else if (window.attachEvent) {
+ window.attachEvent('onload', checkTagging);
+ }
+ })();
+ }</script>
+
+<link href="https&#x3A;&#x2F;&#x2F;ad.doubleclick.net" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;www.gstatic.com" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;googleads.g.doubleclick.net" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;pagead2.googlesyndication.com" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;fonts.googleapis.com" rel="preconnect" />
+<link href="&#x2F;recettes&#x2F;recherche.aspx&#x3F;type&#x3D;all&amp;aqt&#x3D;fraise&amp;start&#x3D;12&amp;page&#x3D;2" rel="next" />
+<link href="https&#x3A;&#x2F;&#x2F;www.marmiton.org&#x2F;recettes&#x2F;recherche.aspx&#x3F;type&#x3D;all&amp;aqt&#x3D;fraise" rel="canonical" />
+<link href="&#x2F;recettes&#x2F;recherche.aspx&#x3F;type&#x3D;all&amp;aqt&#x3D;fraise" rel="prev" />
+<link href="https&#x3A;&#x2F;&#x2F;www.marmiton.org" rel="base" />
+<link href="https&#x3A;&#x2F;&#x2F;w.estat.com" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;api.flymenu.fr" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;blog.marmiton.org" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;www.marmiton.org" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;static.afcdn.com" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;assets.afcdn.com" rel="preconnect" />
+<link href="https&#x3A;&#x2F;&#x2F;fonts.googleapis.com&#x2F;css2&#x3F;family&#x3D;Open&#x2B;Sans&#x3A;ital,wght&#x40;0,300&#x3B;0,400&#x3B;0,600&#x3B;0,700&#x3B;1,300&#x3B;1,600&#x3B;1,700&amp;family&#x3D;Source&#x2B;Sans&#x2B;Pro&#x3A;ital,wght&#x40;0,300&#x3B;0,400&#x3B;0,600&#x3B;0,700&#x3B;1,300&#x3B;1,600&#x3B;1,700&amp;display&#x3D;swap" media="all" rel="stylesheet" type="text&#x2F;css" />
+<link href="https&#x3A;&#x2F;&#x2F;fonts.googleapis.com&#x2F;css2&#x3F;family&#x3D;Source&#x2B;Sans&#x2B;Pro&#x3A;ital,wght&#x40;0,300&#x3B;0,400&#x3B;0,600&#x3B;0,700&#x3B;1,300&#x3B;1,600&#x3B;1,700&amp;display&#x3D;swap" media="all" rel="stylesheet" type="text&#x2F;css" />
+<link href="https://static.afcdn.com/relmrtn/concat.css?PCM-hVLLboQwDPwjWFAPvfSwQuoJqmqpencTA9GaGCWhUvr1zS59kMC2B8h4POPYSWrwPLu8m4km6PEHZFZY-_CKWrLJleCRWefWecJslYC5y6FrnRJnXzEtporHiTXqUJXZoalVP0Q4lQ0IEk0DSj_BexztS5eKK5zKiC-pryVNGhRqwopnHRqKo80A5EfU8_caHcoyew0f_rLN_iYtghFDBUZuiNRgHRh7Aqd0v8b7dWtlXSsME22I1BAuU-lQKlzfL_yr20dF4SQaNniD_t9s97jUptn56y9NCObzW_iOUjYsgTbErQbwSJbjaJE-hwf94qd4oCi46rLyUBaH8nBf3BXFJw" media="all" rel="stylesheet" type="text/css">
+
+	</head>
+	<body class=" body-domuser-fr">
+		<div class="af-overlay"></div>
+        <div id="is_preprod"></div>
+		<script> afAdblock.init(); </script>						<!-- ESI header Preprod :   -->
+<script type="text/html" id="loader_template">
+    <div class="content-loader" id="<%=name%>">
+        <div class="loader"></div>
+    </div>
+</script>
+<script type="text/html" id="recipe-ingredients__qt-counter_template">
+    <div class="recipe-ingredients__qt-counter <%=size%>">
+        <div class="recipe-ingredients__qt-counter__increment recipe-ingredients__qt-counter__increment-minus minus">−</div>
+        <div class="recipe-ingredients__qt-counter__value_container unit-<%=withUnit%>">
+            <input
+                class="recipe-ingredients__qt-counter__value title-5"
+                type="text"
+                value="<%=value%>"
+                min="<%=min%>"
+                max="<%=max%>"
+            >
+        <!-- <% if ('undefined' !== typeof unit) { %> -->
+            <span class="recipe-ingredients__qt-counter_unit"><%=unit%></span>
+        <!-- <% } %> -->
+        </div>
+        <div class="recipe-ingredients__qt-counter__increment recipe-ingredients__qt-counter__increment-plus plus">+</div>
+    </div>
+</script>
+
+<script type="text/html" id="quantity-counter_template">
+    <div class="quantity-counter">
+        <div class="quantity-counter__action minus">−</div>
+
+        <div class="quantity-counter__value">
+            <input
+                    class="recipe-ingredients__qt-counter__value title-5"
+                    type="text"
+                    value="<%=value%>"
+                    min="<%=min%>"
+                    max="<%=max%>"
+            >
+            <!-- <% if ('undefined' !== typeof unit) { %> -->
+            <div class="quantity-counter__unit"><%=unit%></div>
+            <!-- <% } %> -->
+        </div>
+        <div class="quantity-counter__action plus">+</div>
+    </div>
+</script>
+<script type="text/html" id="addToShoppingList-success-template">
+    <div class="mrtn-add-to-shopping-list--sucess noty-with-icon">
+        <a class="mrtn-add-to-shopping-list--sucess__main-link noty__main-link" href="/espace-perso/liste-de-courses.aspx">
+            <div class="noty-icon">
+                <img class="mrtn-add-to-shopping-list--sucess__icon" src="https://static.afcdn.com/relmrtn/Front/Component/ingredientsRecipe/assets/courses.png" />
+            </div>
+            <p class="mrtn-add-to-shopping-list--sucess__message noty__message" data-action="shopping-list">Les ingrédients ont été ajoutés à votre liste de course</p>
+            <span class="noty__link-label">Voir ma liste</span>
+        </a>
+    </div>
+</script>
+
+<script type="text/html" id="addCart-success-template">
+    <div class="mrtn-add-to-shopping-list--sucess noty-with-icon noty-with-icon--recipe-picture">
+            <div class="noty-icon">
+                <!-- <% if (picture) {%> -->
+                    <img class="mrtn-add-to-shopping-list--sucess__icon" src="<%=picture%>" />
+                <!-- <%} else {%> -->
+                    <img class="mrtn-add-to-shopping-list--sucess__icon" src="https://static.afcdn.com/relmrtn/Front/Component/ingredientsRecipe/assets/courses.png" />
+                <!-- <%}%> -->
+            </div>
+            <!-- <%if(isRecipe){%> -->
+            <p class="mrtn-add-to-shopping-list--sucess__message noty__message" data-action="shopping-list">La recette <span><%=title%></span> a bien été ajoutée à votre panier</p>
+            <!-- <%} else {%> -->
+            <p class="mrtn-add-to-shopping-list--sucess__message noty__message" data-action="shopping-list">Les ingredients ont bien été ajoutés à votre panier</p>
+            <!-- <%}%> -->
+        </div>
+</script>
+
+<script type="text/html" id="addCart-error-exists-template">
+    <div class="mrtn-add-to-shopping-list--sucess noty-with-icon noty-with-icon--recipe-picture">
+        <div class="noty-icon">
+            <!-- <% if (picture) {%> -->
+                <img class="mrtn-add-to-shopping-list--sucess__icon" src="<%=picture%>" />
+            <!-- <%} else {%> -->
+                <img class="mrtn-add-to-shopping-list--sucess__icon" src="https://static.afcdn.com/relmrtn/Front/Component/ingredientsRecipe/assets/courses.png" />
+            <!-- <%}%> -->
+        </div>
+        <p class="mrtn-add-to-shopping-list--sucess__message noty__message" data-action="shopping-list">La recette <span><%=title%></span> est déjà dans votre panier</p>
+    </div>
+</script>
+
+<script type="text/html" id="addCart-error-template">
+    <div class="mrtn-add-to-shopping-list--sucess noty-with-icon noty-with-icon--recipe-picture">
+        <div class="noty-icon">
+            <!-- <% if (picture) {%> -->
+            <img class="mrtn-add-to-shopping-list--sucess__icon" src="<%=picture%>" />
+            <!-- <%} else {%> -->
+            <img class="mrtn-add-to-shopping-list--sucess__icon" src="https://static.afcdn.com/relmrtn/Front/Component/ingredientsRecipe/assets/courses.png" />
+            <!-- <%}%> -->
+        </div>
+        <p class="mrtn-add-to-shopping-list--sucess__message noty__message" data-action="shopping-list">La recette <span><%=title%></span> n'a pas pu être ajoutée à votre panier</p>
+    </div>
+</script>
+
+
+<div class="hdr-ctnr no-print" id="header">
+	<header id="mrtn-header">
+
+        		<div class="mrtn-header__container">
+			<div id="mrtn-navsearch" class="search search--extended">
+				<input id="fake-search-field2" name="aqt" type="search" placeholder="Je cherche une recette">
+				<i id="mrtn-closesearch" class="icon-icon_cross_big"></i>
+				<i id="mrtn-launchsearch" class="icon-icon_search"></i>
+			</div>
+			<div class="mrtn-header__top">
+								<a id="menu-burger" href="#" class="mrtn-burger">
+					<span>&nbsp;</span>
+					<span class="mrtn-burger-middle-row">&nbsp;</span>
+					<span>&nbsp;</span>
+				</a>
+				
+					<!-- MOBILE -->
+					<div id="mrtn-navbar" class="search">
+												<a href="/" class="mrtn-logo">
+							<i class="icon icon-mrtn-logo"></i>
+						</a>
+
+													<a href="https://www.marmiton.org/dossier-nouvel-an-chinois/" class="mrtn-special-link">
+								<img class="header-icon-noel" src="https://assets.afcdn.com/recipe/20210128/117664_w96.png"  alt="special menu"/>
+							</a>
+												<div class="separator"></div>
+						<a class="mrtn-search" href="#">
+							<i class="icon-icon_search"></i>
+						</a>
+						<div class="mrtn-search-bar">
+							<form id="form-header-search" method="get" action="/recettes/recherche.aspx" style="display:none">
+								<input id="header-search__default-type" name="type" value="all"/>
+								<input id="header-search-term" name="aqt" />
+							</form>
+							<form id="header-search">
+							<span class="search-icon">
+								<i class="icon-icon_search"></i>
+							</span>
+								<span class="__secondary">Je cherche</span>
+								<input id="mrtn-search-input" class="mrtn-search-input" name="aqt" placeholder="une recette, un ingrédient, de l'aide..." value="" />
+
+								<span id="speechSearch" style="display:none;">
+								<i class="icon-icon_micro_on"></i>
+							</span>
+							</form>
+						</div>
+					</div>
+
+				<div class="mrtn-login-zone">
+					<div class="mrtn-login-btns"></div>
+					
+<div id="flymenu-widget__container" style="display: none;">
+    <div id="flymenu-widget__header">
+        <span>Mon panier</span>
+        <div>
+            <i class="icon icon-cart"></i>
+            <span class="cart-badge">0</span>
+        </div>
+    </div>
+    <div id="flymenu-widget__content">
+
+    </div>
+    <div class="flymenu-widget__action">
+        <button id="flymenu-btn__cart" class="mrtn-btn mrtn-btn-primary" onclick="showFlyMenu()">Commander</button>
+        <div id="cart-add-shopping-btn">
+            <a href="/espace-perso/liste-de-courses.aspx" class="add-shopping connectedUsersOnly">Ajouter à la liste de courses</a>
+        </div>
+    </div>
+
+</div>
+				</div>
+			</div>
+		</div>
+
+
+                <!-- DESKTOP -->
+        <nav id="header-main-menu">
+			<ul>
+                <li>
+                    <a class="header-main-menu__item" href="/cuisine-eco-et-maline/cuisine-speciale-confinement-tp124424.html">
+                        <img class="header-icon-noel" src="/reloaded/static/Front/Component/headerLight/assets/conserve.png" style="width:40px;">
+                        <span>SOS couvre-feu</span>
+                    </a>
+                </li>
+
+                				<li>
+					<a class="header-main-menu__item" href="https://www.marmiton.org/dossier-nouvel-an-chinois/">
+						<img class="header-icon-noel" src="https://assets.afcdn.com/recipe/20210128/117664_w96.png" />
+						Nouvel An Chinois					</a>
+				</li>
+								<li>
+					<a class="header-main-menu__item" href="/recettes/recette-meme-auteur.aspx?pseudo=recettespetits-plats-en-equilibre">
+                        <img class="header-icon-ensemble-en-cuisine" src="https://assets.afcdn.com/recipe/20200608/111805_w96cxt0cyt0cxb48cyb48.png">
+						<span>Petits plats en équilibre</span>
+					</a>
+				</li>
+				<li>
+					<a class="header-main-menu__item" href="/mieux-cuisiner/mieux-manger-tp125264.html">
+						<span>Mieux manger</span>
+					</a>
+				</li>
+				<li>
+					<a class="header-main-menu__item" id="random-recipe" href="/recettes/recette-hasard.aspx">
+						<span class="icon-special-recipe">
+							<img src="/reloaded/front/img/nav/nav_cocacola.png" />
+						</span>
+						<span class="strong label">Recette au hasard</span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+	
+	</header>
+
+	<div id="close-menu-mobile" class="close-menu-mobile-flymenu">
+		<i class="icon-icon_cross_big"></i>
+	</div>
+	<div id="drawer-flymenu">
+		<div class="nav-wrapper">
+						<ul class="nav-menu-main title-4">
+				<li class="no-sub"><a href="/"><span class="label">Aujourd'hui sur Marmiton</span></a></li>
+				<li class="no-sub"><a href="https://www.marmiton.org/recettes/recherche.aspx?type="><span class="label">Je recherche</span></a></li>
+
+				<li class="i-b">
+					<span class="label">Idées recettes</span> <span class="icon-holder"><i class="switch-icon icon-icon_plus"></i></span>
+					<ul class="nav-menu-sub title-4">
+						<li><a href="/recettes/">Toutes les recettes</a></li>
+						<li><a href="https://www.marmiton.org/recettes/top-internautes.aspx">Top des recettes</a></li>
+						<li><a href="/recettes/recettes-incontournables.aspx" class="menu-sub-long">Les grands classiques de la cuisine</a></li>
+						<li><a href="https://www.marmiton.org/recettes/nouveautes.aspx">Nouveautés</a></li>
+						<li><a href="/recettes/selections.aspx">Recettes par thème</a></li>
+						<li><a href="/recettes/menu-de-la-semaine.aspx">Menu de la semaine</a></li>
+						<li><a href="/mieux-cuisiner/recette-de-saison-tp124490.html">Cuisine de saison</a></li>
+
+						<!-- display again when album homepage available pour marmiton -->
+						<!-- <li><a href="/magazine/diaporamiam.aspx">Diaporamas photos</a></li> -->
+						<li><a href="/recettes/index/ingredient">Recettes par ingrédient</a></li>
+                        <li><a href="/recettes/index/ustensile">Recettes par ustensile</a></li>
+                        <li><a class="connectedUsersOnly" href="/recettes/proposer">Je propose une recette</a></li>
+					</ul>
+				</li>
+				<li class="no-sub"><a href="https://www.marmiton.org/dossier-nouvel-an-chinois/"><span class="label">Nouvel An Chinois</span></a></li>				<li class="no-sub"><a href="/recettes/recette-hasard.aspx" id="random-recipe-drawer"><span class="label">Recette au hasard</span></a></li>
+				<li class="no-sub"><a href="/mieux-cuisiner/mieux-manger-tp125264.html"><span class="label">Mieux Manger</span></a></li>
+
+				<li class="i-b">
+					<span class="label">Recettes par catégories</span> <span class="icon-holder"><i class="switch-icon icon-icon_plus"></i></span>
+					<ul class="nav-menu-sub title-4">
+						<li ><a href="/recettes/index/categorie/aperitif-ou-buffet/">Apéritif et buffet</a></li>
+						<li ><a href="/recettes/index/categorie/entree/">Entrée</a></li>
+						<li ><a href="/recettes/index/categorie/plat-principal/">Plat principal</a></li>
+						<li ><a href="/recettes/index/categorie/dessert/">Dessert</a></li>
+					</ul>
+				</li>
+
+                <li class="no-sub"><a href="https://abomagazine.marmiton.org/"><span class="label">Marmiton Magazine</span></a></li>
+				<!-- <li class="no-sub"><a href="https://www.marmiton.org/mieux-acheter/shopping-ssc20.html"><span class="label">Shopping</span></a></li> -->
+				<li class="i-b">
+					<span class="label">Shopping</span> <span class="icon-holder"><i class="switch-icon icon-icon_plus"></i></span>
+					<ul class="nav-menu-sub title-4">
+						<li><a href="https://www.marmiton.org/mieux-acheter/shopping-ssc20.html?utm_source=website&utm_medium=shopping_menu&utm_campaign=all_sous_categorie">Mieux acheter</a></li>
+						<li><a href="/sp/bon-plan/toutes-nos-offres.html">Bons plans</a></li>
+					</ul>
+				</li>
+				<li class="no-sub"><a href="https://www.marmiton.org/forum/"><span class="label">Forum</span></a></li>
+				<li class="i-b">
+					<span class="label">Mes aides à la cuisine</span> <span class="icon-holder"><i class="switch-icon icon-icon_plus"></i></span>
+					<ul class="nav-menu-sub title-4">
+						<li><a href="https://www.marmiton.org/espace-perso/liste-de-courses.aspx">Ma liste de courses</a></li>
+						<li><a href="https://www.marmiton.org/marmitests/home.html">Marmitests</a></li>
+						<li><a href="https://www.marmiton.org/pratique/table-conversion.aspx">Table de conversion</a></li>
+					</ul>
+				</li>
+				<li class="no-sub"><a href="/qu-est-ce-qu-on-mange-ce-soir-sc29.html"><span class="label">Et pour ce soir ?</span></a></li>
+			</ul>
+			<div class="bottom-menu">
+				<div class="promoted-content">
+					<a href="https://www.marmiton.org/dossier-saint-valentin/" >
+						<div class="promoted-content__img-container">
+							<img src="https://assets.afcdn.com/recipe/20210128/117665_w650.jpg" alt="L'amour est partout... et surtout dans l'assiette" />
+						</div>
+						<div class="promoted-content__title">
+							<h4>Saint-Valentin</h4>
+							<p class="title-4 promoted-content__sub-title">L'amour est partout... et surtout dans l'assiette</p>
+						</div>
+					</a>
+					<hr>
+				</div>
+				<div class="i-b-wrapper">
+					<div class="i-b tag-list-ctnr">
+						<h4>Tendances en cuisine</h4>
+						<p class="tag-list title-4">
+							<a class="tag-list__item" href="/recettes/recette_gratin-dauphinois_13809.aspx"><span class="hash">#</span><span>Gratin Dauphinois</span></a>
+							<a class="tag-list__item" href="/recettes/recette_gateau-au-yaourt_12719.aspx"><span class="hash">#</span><span>Gateau au yaourt</span></a>
+							<a class="tag-list__item" href="/recettes/recherche.aspx?aqt=chocolat"><span class="hash">#</span><span>chocolat</span></a>
+							<a class="tag-list__item" href="/recettes/recherche.aspx?aqt=poulet"><span class="hash">#</span><span>poulet</span></a>
+						</p>
+					</div>
+					<div class="i-b marmi-mag">
+						<hr class="">
+
+						
+						<div class="auto-pm">
+							<a href="https://abomagazine.marmiton.org/" class="img-ctnr">
+								<img src="https://assets.afcdn.com/recipe/20210128/117663_w150h190c1.jpg" alt="marmiton mag couverture" />
+							</a>
+
+							<div class="auto-pm__mag-desc">
+																	<h4>Abonnez-vous à notre magazine</h4>
+								
+								<div class="auto-pm-text-block">
+									<p class="title-4">Version papier ou numérique, à vous de choisir !</p>
+									<p class="text-center"><a href="https://abomagazine.marmiton.org/" class="mrtn-btn mrtn-btn-default ">Je m'abonne</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <div style="z-index: 10">
+	<script src="http://www.marmiton.org/partenaires/partenariat/header.js"></script>
+</div> -->
+
+<div class="snow"></div>
+
+
+<script type="text/javascript">
+	var userId = 0;
+	var userV2Id = 0;
+	var initLocalStorage = false;
+	var avatarSprite;
+	(function () {
+		var usernameC = null;
+		var c = document.cookie.split(';');
+		for (var i = 0; i < c.length; i++) {
+			var x = c[i].substr(0, c[i].indexOf('='));
+			var y = c[i].substr(c[i].indexOf('=') + 1);
+			x = x.replace(/^\s+|\s+$/g, '');
+			if (x == 'afperso' || x === 'afpperso') {
+				var t = y.split('&');
+				for (var j = 0; j < t.length; j++) {
+					var a = t[j].substr(0, t[j].indexOf('='));
+					if (a === 'cu') userId = unescape(t[j].substr(t[j].indexOf('=') + 1));
+					if (a === 'cuv2') userV2Id = unescape(t[j].substr(t[j].indexOf('=') + 1));
+					if (a === 'un') usernameC = unescape(t[j].substr(t[j].indexOf('=') + 1));
+				}
+			}
+		}
+	})();
+	(function () {
+		if (window.Mrtn && Mrtn.USER && Mrtn.USER.id > 0) {
+			var username = Mrtn.USER.name;
+			var avatarUrl = 'https://static.afcdn.com/relmrtn/shim.gif'; // TODO: remove
+			var nbUnreadPM = 0;
+			try {
+				username = localStorage.getItem('username') || Mrtn.USER.name;
+				avatarUrl = localStorage.getItem('avatarUrl') || avatarUrl;
+				avatarSprite = 'af-avatar avatar-letter avatar-letter-' + username.substring(0, 1);
+				nbUnreadPM = localStorage.getItem('nbUnreadPM');
+				nbUnreadFavorites = localStorage.getItem('nbUnreadFavorites');
+			} catch(e) {}
+			if (username && avatarUrl) {
+				buildconnectedHeader(Mrtn.USER.id, username, avatarUrl, nbUnreadPM, nbUnreadFavorites);
+			} else {
+				initLocalStorage = true;
+			}
+		} else {
+          buildNotconnectedHeader();
+        }
+      if (isMobile()) {
+        document.getElementsByClassName('mrtn-search')[0].insertAdjacentHTML('afterend', '<a href="#" class="flymenu-widget-heading" data-action="cart"><i class="icon icon-cart"></i><span class="cart-badge">0</span></a>');
+      }
+	})();
+
+	function buildconnectedHeader(userId, username, avatarUrl, nbUnreadPM, nbUnreadFavorites) {
+      var e = document.querySelector('.top-menu') || document.getElementsByClassName('mrtn-login-btns')[0];
+      var classLetter = avatarUrl === 'https://static.afcdn.com/relmrtn/shim.gif' ? ' class="' + avatarSprite + '"' : '';
+
+      var myProfileUrl = '/my-profile/edit';
+      var logoutUrl = '/reloaded/users/logout';
+
+      e.innerHTML = '<div class="mrtn-login-link connected">'
+        + '<div class="mrtn-user-header">'
+        + '<div id="username" class="username">'
+        + '<a href="' + myProfileUrl + '" class="avatar">'
+        + '<span class="mrtn-avatar--empty--xlarge mrtn-avatar--empty mrtn-hide-on-print">' + username.substring(0, 1) + '</span>'
+        + '</a>'
+        + '<a class="un" href="' + myProfileUrl + '">'
+        + username
+        + '</a>'
+        +'</div>'
+        + '<div class="opts">'
+        + '<a class="user-setting" href="/espace-perso/mes-parametres-personnels.aspx"><i class="icon-icon_setting"></i></a>'
+        + '<a class="user-unlog" href="' + logoutUrl + '" title="Me déconnecter"><i class="icon-locker-open"></i></a>'
+        + '</div>'
+        + '</div>'
+        + '<div class="mrtn-btns-header">'
+        + (!isMobile()
+          ? '<a href="#" class="mrtn-btn mrtn-btn-secondary mrtn-btn--with-icon mrtn-btn--small" data-action="cart"><i class="icon icon-cart"></i><span>Mon Panier</span><span class="cart-badge">0</span></a>'
+          : '<a href="' + myProfileUrl + '" class="mrtn-btn mrtn-btn-secondary mrtn-btn-text-only mrtn-btn--small">Mon profil</a>')
+        + '<a href="/espace-perso/mon-carnet-de-recettes.aspx" class="mrtn-btn mrtn-btn-secondary mrtn-btn-text-only mrtn-btn--small">Mes recettes</a>'
+        + '</div>'
+		+ '</div>';
+		document.body.classList.add('connected');
+	}
+
+    function buildNotconnectedHeader() {
+      let htmlToConnect = '<div class="mrtn-login-link disconnected mrtn-login-link--with-flymenu">';
+      htmlToConnect += '<a href="#" class="mrtn-btn mrtn-btn-secondary mrtn-btn--with-icon" data-action="cart"><i class="icon icon-cart"></i><span>Mon Panier</span><span class="cart-badge">0</span></a>';
+      htmlToConnect += '<a href="/reloaded/users/login" class="mrtn-btn mrtn-btn-primary mrtn-btn--with-icon">'
+        + '<i class="icon icon-icon_profile"></i> <span>Connexion</span>'
+        + '</a>'
+        + '</div>';
+
+      if (!isMobile()) {
+        document.getElementsByClassName('mrtn-login-btns')[0].innerHTML = htmlToConnect;
+	  }
+	  document.body.classList.add('disconnected');
+    }
+
+    function isMobile() {
+      return (screen.width <= 640)
+        || (window.matchMedia && window.matchMedia('only screen and (max-width: 640px)').matches);
+	}
+
+
+</script>
+<script type="text/javascript">
+            if (window.afAd) {
+                afAd.render("banner_atf", []);
+            }
+        </script>		<div id="content">
+			
+
+<div class="mrtn-overlay"></div>
+
+
+
+
+<script type="text/x-handlebars-template" id="search-filter-tag">
+	{{#each filters}}
+		<li class="recipe-search-filters__list-tags__item">
+			<span>{{this.label}}</span>
+			<i class="icon-icon_cross_small recipe-search-filters__list-tags__item__close" data-filter-id="{{this.id}}"></i>
+		</li>
+	{{/each}}
+</script>
+
+
+<form action="/recettes/recherche.aspx" id="recipe-search-form">
+	
+	<div id="search-term-div" style="display: none">
+		<input type="text" id="search-term" name="aqt" value="">
+		<input type="submit" value="go !">
+
+		<span class="mrtn-btn mrtn-btn-text-only mrtn-btn-primary" id="recipe-open-filters">filtrer</span>
+	</div>
+
+	<div class="recipe-search-filters mrtn-modal mrtn-scrollable">
+		<nav class="">
+			<p class="mrtn-modal-title">Filtrer</p>
+			<span class="modal__nav--close">
+				<i class="icon-icon_cross_big"></i>
+			</span>
+		</nav>
+
+		<div class="padded-content-filter">
+			
+			<div id="recipe-search-filters-container" class="recipe-search-filters-container hide">
+
+				<h3 class="mrtn-font-semi-bold recipe-search-filters__list-tags__title">
+					Mes filtres					<span class="recipe-search-filters__list-tags__counter recipe-search-filters__list-tags__counter--big" id="recipe-search-filters__list-tags__counter"></span>
+					<span class="recipe-search-filters__remove-all" id="recipe-search-filters__remove-all">tout effacer</span>
+				</h3>
+				<p class="recipe-search-filters-container__infos first-letter-maj">
+					Supprimez simplement vos filtres avec la croix				</p>
+
+				<ul id="recipe-search-filters__list-tags" class="recipe-search-filters__list-tags">
+					
+				</ul>
+			</div>
+
+
+
+			
+
+<div id="recipe-filter__dish-type" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			type de plat			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-dish-type-52" data-label="Entrée" title="Entrée" type="checkbox" name="dt" value="entree" />
+				<label for="filter-dish-type-52" title="Entrée">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Entrée.svg">
+					Entrée				</object -->
+
+				Entrée					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-51" data-label="Plat principal" title="Plat principal" type="checkbox" name="dt" value="platprincipal" />
+				<label for="filter-dish-type-51" title="Plat principal">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Plat principal.svg">
+					Plat principal				</object -->
+
+				Plat principal					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-55" data-label="Dessert" title="Dessert" type="checkbox" name="dt" value="dessert" />
+				<label for="filter-dish-type-55" title="Dessert">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Dessert.svg">
+					Dessert				</object -->
+
+				Dessert					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-49" data-label="Amuse-gueule" title="Amuse-gueule" type="checkbox" name="dt" value="amusegueule" />
+				<label for="filter-dish-type-49" title="Amuse-gueule">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Amuse-gueule.svg">
+					Amuse-gueule				</object -->
+
+				Amuse-gueule					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-50" data-label="Accompagnement" title="Accompagnement" type="checkbox" name="dt" value="accompagnement" />
+				<label for="filter-dish-type-50" title="Accompagnement">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Accompagnement.svg">
+					Accompagnement				</object -->
+
+				Accompagnement					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-48" data-label="Sauce" title="Sauce" type="checkbox" name="dt" value="sauce" />
+				<label for="filter-dish-type-48" title="Sauce">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Sauce.svg">
+					Sauce				</object -->
+
+				Sauce					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-54" data-label="Boisson" title="Boisson" type="checkbox" name="dt" value="boisson" />
+				<label for="filter-dish-type-54" title="Boisson">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Boisson.svg">
+					Boisson				</object -->
+
+				Boisson					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-47" data-label="Confiserie" title="Confiserie" type="checkbox" name="dt" value="confiserie" />
+				<label for="filter-dish-type-47" title="Confiserie">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Confiserie.svg">
+					Confiserie				</object -->
+
+				Confiserie					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-dish-type-53" data-label="Conseil" title="Conseil" type="checkbox" name="dt" value="conseil" />
+				<label for="filter-dish-type-53" title="Conseil">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Conseil.svg">
+					Conseil				</object -->
+
+				Conseil					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+<div id="recipe-filter__level" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Difficulté			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-level-1" data-label="très facile" title="très facile" type="checkbox" name="dif" value="1" />
+				<label for="filter-level-1" title="très facile">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/très facile.svg">
+					très facile				</object -->
+
+				très facile					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-level-2" data-label="facile" title="facile" type="checkbox" name="dif" value="2" />
+				<label for="filter-level-2" title="facile">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/facile.svg">
+					facile				</object -->
+
+				facile					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-level-3" data-label="Niveau moyen" title="Niveau moyen" type="checkbox" name="dif" value="3" />
+				<label for="filter-level-3" title="Niveau moyen">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Niveau moyen.svg">
+					Niveau moyen				</object -->
+
+				Niveau moyen					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-level-4" data-label="difficile" title="difficile" type="checkbox" name="dif" value="4" />
+				<label for="filter-level-4" title="difficile">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/difficile.svg">
+					difficile				</object -->
+
+				difficile					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+<div id="recipe-filter__budget" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Coût			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-budget-1" data-label="bon marché" title="bon marché" type="checkbox" name="exp" value="1" />
+				<label for="filter-budget-1" title="bon marché">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/bon marché.svg">
+					bon marché				</object -->
+
+				bon marché					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-budget-2" data-label="Coût moyen" title="Coût moyen" type="checkbox" name="exp" value="2" />
+				<label for="filter-budget-2" title="Coût moyen">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Coût moyen.svg">
+					Coût moyen				</object -->
+
+				Coût moyen					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-budget-3" data-label="assez cher" title="assez cher" type="checkbox" name="exp" value="3" />
+				<label for="filter-budget-3" title="assez cher">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/assez cher.svg">
+					assez cher				</object -->
+
+				assez cher					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+<div id="recipe-filter__particularity" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Particularité			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-particularity-1" data-label="Végétarien" title="Végétarien" type="checkbox" name="prt" value="1" />
+				<label for="filter-particularity-1" title="Végétarien">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Végétarien.svg">
+					Végétarien				</object -->
+
+				Végétarien					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-particularity-2" data-label="Sans gluten" title="Sans gluten" type="checkbox" name="prt" value="2" />
+				<label for="filter-particularity-2" title="Sans gluten">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Sans gluten.svg">
+					Sans gluten				</object -->
+
+				Sans gluten					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-particularity-3" data-label="Végan" title="Végan" type="checkbox" name="prt" value="3" />
+				<label for="filter-particularity-3" title="Végan">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Végan.svg">
+					Végan				</object -->
+
+				Végan					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-particularity-4" data-label="Sans lactose" title="Sans lactose" type="checkbox" name="prt" value="4" />
+				<label for="filter-particularity-4" title="Sans lactose">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Sans lactose.svg">
+					Sans lactose				</object -->
+
+				Sans lactose					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+<div id="recipe-filter__preparation-time" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Temps passé en cuisine			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-preparation-time-15" data-label="Moins de 15 minutes" title="Moins de 15 minutes" type="checkbox" name="ttlt" value="15" />
+				<label for="filter-preparation-time-15" title="Moins de 15 minutes">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Moins de 15 minutes.svg">
+					Moins de 15 minutes				</object -->
+
+				Moins de 15 minutes					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-preparation-time-30" data-label="Moins de 30 minutes" title="Moins de 30 minutes" type="checkbox" name="ttlt" value="30" />
+				<label for="filter-preparation-time-30" title="Moins de 30 minutes">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Moins de 30 minutes.svg">
+					Moins de 30 minutes				</object -->
+
+				Moins de 30 minutes					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-preparation-time-45" data-label="Moins de 45 minutes" title="Moins de 45 minutes" type="checkbox" name="ttlt" value="45" />
+				<label for="filter-preparation-time-45" title="Moins de 45 minutes">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/Moins de 45 minutes.svg">
+					Moins de 45 minutes				</object -->
+
+				Moins de 45 minutes					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+<div id="recipe-filter__photo" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Photo			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-photo-1" data-label="avec photo" title="avec photo" type="checkbox" name="pht" value="1" />
+				<label for="filter-photo-1" title="avec photo">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/avec photo.svg">
+					avec photo				</object -->
+
+				avec photo					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+<div id="recipe-filter__cooking" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			Type de cuisson			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-cooking-3" data-label="aucun" title="aucun" type="checkbox" name="rct" value="3" />
+				<label for="filter-cooking-3" title="aucun">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/aucun.svg">
+					aucun				</object -->
+
+				aucun					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-cooking-1" data-label="four" title="four" type="checkbox" name="rct" value="1" />
+				<label for="filter-cooking-1" title="four">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/four.svg">
+					four				</object -->
+
+				four					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-cooking-4" data-label="micro-ondes" title="micro-ondes" type="checkbox" name="rct" value="4" />
+				<label for="filter-cooking-4" title="micro-ondes">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/micro-ondes.svg">
+					micro-ondes				</object -->
+
+				micro-ondes					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+<div id="recipe-filter__more" class="recipe-search-filter">
+	<div class="filter-header">
+		<h3 class="recipe-search-filter__title title-5">
+			plus			<span class="recipe-search-filters__list-tags__counter"></span>
+		</h3>
+		<i class="filter-header__toggle icon-icon_arrow_small_bottom"></i>
+	</div>
+	<div class="filter-main-content">
+		<ul class="filter__list-line">
+
+					<li class="filter-line">
+				<input id="filter-more-st" data-label="dans les ingrédients" title="dans les ingrédients" type="checkbox" name="st" value="1" />
+				<label for="filter-more-st" title="dans les ingrédients">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/dans les ingrédients.svg">
+					dans les ingrédients				</object -->
+
+				dans les ingrédients					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-more-recipe" data-label="afficher uniquement des recettes" title="afficher uniquement des recettes" type="checkbox" name="type" value="recipe" />
+				<label for="filter-more-recipe" title="afficher uniquement des recettes">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/afficher uniquement des recettes.svg">
+					afficher uniquement des recettes				</object -->
+
+				afficher uniquement des recettes					
+				</label>
+			</li>
+					<li class="filter-line">
+				<input id="filter-more-recipe-season" data-label="afficher uniquement des recettes de saison" title="afficher uniquement des recettes de saison" type="checkbox" name="type" value="season" />
+				<label for="filter-more-recipe-season" title="afficher uniquement des recettes de saison">
+
+				<!--- object type="image/svg+xml" data="https://static.afcdn.com/relmrtn/Front/Component/recipeSearchFilterDishType/assets/svg/afficher uniquement des recettes de saison.svg">
+					afficher uniquement des recettes de saison				</object -->
+
+				afficher uniquement des recettes de saison					
+				</label>
+			</li>
+		
+		</ul>
+
+		<!-- div class="mobile-show">
+			
+		<span class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only filter-validate-btn">
+			valider		</span>
+		</div -->
+	</div>
+</div>
+
+		</div>
+
+		<p class="mrtn-text-center recipe-search-filters__view-results">
+			<button class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only" id="recipe-search-filters__submit" >voir les résultats</button>
+		</p>
+
+
+	</div>
+
+</form>
+
+<div id="recipe-search__results__header" class="recipe-search__results__header">
+	<div class="recipe-search__results__header__search-term">
+		<i class="icon-icon_search"></i>
+		<input id="fake-search-type" type="hidden" name="searchtype" value="all">
+		<!-- waiting for new header -->
+		<input id="fake-search-field" type="text" name="" value="fraise" placeholder="Je cherche une recette">
+		<button class="mrtn-btn mrtn-btn-primary mrtn-btn-text-only" id="recipe-search-results__submit">OK</button>
+	</div>
+
+		<div class="recipe-search__results__header__recipe-only">
+		<input id="recipe-search__results__header__recipe-only__checkbox" type="checkbox" data-linked-id="filter-more-recipe" name="type" value="recipe">
+		<label for="recipe-search__results__header__recipe-only__checkbox" class="first-letter-maj">afficher uniquement les recettes</label>
+		<input id="recipe-search__results__header__recipe-season-only__checkbox" type="checkbox" data-linked-id="filter-more-recipe-season" name="type" value="season">
+		<label for="recipe-search__results__header__recipe-season-only__checkbox" class="first-letter-maj">afficher uniquement les recettes de saison</label>
+	</div>
+	
+	<div class="recipe-search__results__header__filters recipe-open-filters">
+		<i class="icon-icon_filters"></i>
+		<span class="first-letter-maj desktop-show tablet-show mrtn-font-bold">
+			filtrer les résultats		</span>
+		<span class="recipe-search__results__header__filters__counter recipe-search-filters__list-tags__counter" style="display: none;"></span>
+	</div>
+</div>
+
+
+
+<div class="recipe-search__resuts">
+
+	<div class="recipe-search__col-left">
+
+		<div class="padded-content">
+			<h1 class="recipe-search__main-title title-2 first-letter-maj">fraise</h1>
+						<span class="recipe-search__nb-results">1354 résultats</span>
+						
+			<div class="recipe-results ">
+				
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_confiture-de-fraise_25640.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130627/10325_w175h125c1cx1250cy1875.webp 175w,
+https://assets.afcdn.com/recipe/20130627/10325_w350h250c1cx1250cy1875.webp 350w,
+https://assets.afcdn.com/recipe/20130627/10325_w700h500c1cx1250cy1875.webp 2x,
+https://assets.afcdn.com/recipe/20130627/10325_w1050h750c1cx1250cy1875.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130627/10325_w175h125c1cx1250cy1875.jpg 175w,
+https://assets.afcdn.com/recipe/20130627/10325_w350h250c1cx1250cy1875.jpg 350w,
+https://assets.afcdn.com/recipe/20130627/10325_w700h500c1cx1250cy1875.jpg 2x,
+https://assets.afcdn.com/recipe/20130627/10325_w1050h750c1cx1250cy1875.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20130627/10325_w175h125c1cx1250cy1875.jpg 175w,
+https://assets.afcdn.com/recipe/20130627/10325_w350h250c1cx1250cy1875.jpg 350w,
+https://assets.afcdn.com/recipe/20130627/10325_w700h500c1cx1250cy1875.jpg 2x,
+https://assets.afcdn.com/recipe/20130627/10325_w1050h750c1cx1250cy1875.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20130627/10325_w350h250c1cx1250cy1875.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="confiture de fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20130627/10325_w350h250c1cx1250cy1875.jpg" data-recipe-id="25640" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Confiserie</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">confiture de fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.1</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 81 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, sucre, citron, confiture.<br/>Presser le citron. Laver et essorer les fraises.  Mettre les fraises, le jus de citron et le sucre dans une casserole et la placer sur le feu en tournant de temps en...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">1h15</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<h2 class="list-scroll-title">Ingrédients </h2>
+
+<div class="recipe-list-scroll">
+			<div class="recipe-list-scroll-nav recipe-list-scroll-prev mrtn-hide-on-print">
+			<i class="icon-arrow-left"></i>
+		</div>
+		
+	<div class="recipe-scroll-list">
+		<ul class="recipe-scroll-list__list">
+												<li class="recipe-scroll-list__list__item">
+					<a href="/recettes/index/ingredient/fraise">
+						<div class="recipe-scroll-list__list__item__picture">
+							<img src="https://assets.afcdn.com/recipe/20100101/ingredient_default_w312h230c1.jpg" alt="Recette" width="312" height="230" />
+							<ul class="recipe-scroll-list__list__item__tags__list">
+								<li class="mrtn-tag mrtn-tag--dark">Ingrédient</li>
+							</ul>
+						</div>
+						<h4 class="recipe-scroll-list__list__item__title"> fraise</h4>
+					</a>
+				</li>
+												<li class="recipe-scroll-list__list__item">
+					<a href="/recettes/index/ingredient/fraise-gariguette">
+						<div class="recipe-scroll-list__list__item__picture">
+							<img src="https://assets.afcdn.com/recipe/20171228/76358_w312h230c1cxt0cyt0cxb5000cyb5000.jpg" alt="Recette" width="312" height="230" />
+							<ul class="recipe-scroll-list__list__item__tags__list">
+								<li class="mrtn-tag mrtn-tag--dark">Ingrédient</li>
+							</ul>
+						</div>
+						<h4 class="recipe-scroll-list__list__item__title"> fraise gariguette</h4>
+					</a>
+				</li>
+												<li class="recipe-scroll-list__list__item">
+					<a href="/recettes/index/ingredient/petite-fraise">
+						<div class="recipe-scroll-list__list__item__picture">
+							<img src="https://assets.afcdn.com/recipe/20100101/ingredient_default_w312h230c1.jpg" alt="Recette" width="312" height="230" />
+							<ul class="recipe-scroll-list__list__item__tags__list">
+								<li class="mrtn-tag mrtn-tag--dark">Ingrédient</li>
+							</ul>
+						</div>
+						<h4 class="recipe-scroll-list__list__item__title"> petite fraise</h4>
+					</a>
+				</li>
+												<li class="recipe-scroll-list__list__item">
+					<a href="/recettes/index/ingredient/sorbet-fraise">
+						<div class="recipe-scroll-list__list__item__picture">
+							<img src="https://assets.afcdn.com/recipe/20180822/81851_w312h230c1cxt0cyt0cxb3865cyb2576.jpg" alt="Recette" width="312" height="230" />
+							<ul class="recipe-scroll-list__list__item__tags__list">
+								<li class="mrtn-tag mrtn-tag--dark">Ingrédient</li>
+							</ul>
+						</div>
+						<h4 class="recipe-scroll-list__list__item__title"> sorbet fraise</h4>
+					</a>
+				</li>
+												<li class="recipe-scroll-list__list__item">
+					<a href="/recettes/index/ingredient/alcool-de-fraise">
+						<div class="recipe-scroll-list__list__item__picture">
+							<img src="https://assets.afcdn.com/recipe/20100101/ingredient_default_w312h230c1.jpg" alt="Recette" width="312" height="230" />
+							<ul class="recipe-scroll-list__list__item__tags__list">
+								<li class="mrtn-tag mrtn-tag--dark">Ingrédient</li>
+							</ul>
+						</div>
+						<h4 class="recipe-scroll-list__list__item__title"> Alcool de fraise</h4>
+					</a>
+				</li>
+										<li class="recipe-scroll-list__list__item"></li>
+					</ul>
+	</div>
+
+			<div class="recipe-list-scroll-nav recipe-list-scroll-next mrtn-hide-on-print">
+			<i class="icon-arrow-right"></i>
+		</div>
+		
+</div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_panacotta-a-la-fraise_10976.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130719/62958_w175h125c1cx1504cy1000.webp 175w,
+https://assets.afcdn.com/recipe/20130719/62958_w350h250c1cx1504cy1000.webp 350w,
+https://assets.afcdn.com/recipe/20130719/62958_w700h500c1cx1504cy1000.webp 2x,
+https://assets.afcdn.com/recipe/20130719/62958_w1050h750c1cx1504cy1000.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130719/62958_w175h125c1cx1504cy1000.jpg 175w,
+https://assets.afcdn.com/recipe/20130719/62958_w350h250c1cx1504cy1000.jpg 350w,
+https://assets.afcdn.com/recipe/20130719/62958_w700h500c1cx1504cy1000.jpg 2x,
+https://assets.afcdn.com/recipe/20130719/62958_w1050h750c1cx1504cy1000.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20130719/62958_w175h125c1cx1504cy1000.jpg 175w,
+https://assets.afcdn.com/recipe/20130719/62958_w350h250c1cx1504cy1000.jpg 350w,
+https://assets.afcdn.com/recipe/20130719/62958_w700h500c1cx1504cy1000.jpg 2x,
+https://assets.afcdn.com/recipe/20130719/62958_w1050h750c1cx1504cy1000.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20130719/62958_w350h250c1cx1504cy1000.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Panacotta à la fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20130719/62958_w350h250c1cx1504cy1000.jpg" data-recipe-id="10976" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Dessert</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Panacotta à la fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.5</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 108 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : crème liquide, sucre en poudre, gélatine, vanille, menthe, fraises.<br/>Verser la crème dans une casserole. Ajouter le sucre et la vanille. Porter à ébullition en ne cessant de tourner avec une cuillère...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">25 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_coulis-de-fraise_55249.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130614/27010_w175h125c1cx256cy192.webp 175w,
+https://assets.afcdn.com/recipe/20130614/27010_w350h250c1cx256cy192.webp 350w,
+https://assets.afcdn.com/recipe/20130614/27010_w700h500c1cx256cy192.webp 2x,
+https://assets.afcdn.com/recipe/20130614/27010_w1050h750c1cx256cy192.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20130614/27010_w175h125c1cx256cy192.jpg 175w,
+https://assets.afcdn.com/recipe/20130614/27010_w350h250c1cx256cy192.jpg 350w,
+https://assets.afcdn.com/recipe/20130614/27010_w700h500c1cx256cy192.jpg 2x,
+https://assets.afcdn.com/recipe/20130614/27010_w1050h750c1cx256cy192.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20130614/27010_w175h125c1cx256cy192.jpg 175w,
+https://assets.afcdn.com/recipe/20130614/27010_w350h250c1cx256cy192.jpg 350w,
+https://assets.afcdn.com/recipe/20130614/27010_w700h500c1cx256cy192.jpg 2x,
+https://assets.afcdn.com/recipe/20130614/27010_w1050h750c1cx256cy192.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20130614/27010_w350h250c1cx256cy192.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Coulis de fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20130614/27010_w350h250c1cx256cy192.jpg" data-recipe-id="55249" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Sauce</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Coulis de fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.9</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 47 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, citron, sucre en poudre, eau.<br/>Dans un mixeur, mettre les fraises, le sucre et le jus de citron. Mixer et ajouter l'eau au fur et à mesure. Passer au chinois étamine pour éliminer les pépins....		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">5 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a id="brand-recipe-card__4"onclick="af_ua_trackEvent('Statistics', 'BrandRecipe - Click', '[Nestlé Dessert] Bâtonnets glacés fraise chocolat');" class="recipe-card-link" href="/recettes/recette_batonnets-glaces-fraise-chocolat_371365.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20181227/85142_w175h125c1cx240cy168.webp 175w,
+https://assets.afcdn.com/recipe/20181227/85142_w350h250c1cx240cy168.webp 350w,
+https://assets.afcdn.com/recipe/20181227/85142_w700h500c1cx240cy168.webp 2x,
+https://assets.afcdn.com/recipe/20181227/85142_w1050h750c1cx240cy168.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20181227/85142_w175h125c1cx240cy168.jpg 175w,
+https://assets.afcdn.com/recipe/20181227/85142_w350h250c1cx240cy168.jpg 350w,
+https://assets.afcdn.com/recipe/20181227/85142_w700h500c1cx240cy168.jpg 2x,
+https://assets.afcdn.com/recipe/20181227/85142_w1050h750c1cx240cy168.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20181227/85142_w175h125c1cx240cy168.jpg 175w,
+https://assets.afcdn.com/recipe/20181227/85142_w350h250c1cx240cy168.jpg 350w,
+https://assets.afcdn.com/recipe/20181227/85142_w700h500c1cx240cy168.jpg 2x,
+https://assets.afcdn.com/recipe/20181227/85142_w1050h750c1cx240cy168.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20181227/85142_w350h250c1cx240cy168.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Bâtonnets glacés fraise chocolat" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20181227/85142_w350h250c1cx240cy168.jpg" data-recipe-id="371365" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Dessert</li>
+											</ul>
+	</div>
+
+	<div>
+					<div class="recipe-card__sponsored">
+				<span class="mrtn-tag mrtn-tag--orange recipe-card__sponsored__tag">sponsorisé</span>
+				<hr>
+			</div>
+						<h4 class="recipe-card__title">Bâtonnets glacés fraise chocolat</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 1</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 1 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises,Chocolat NESTLÉ DESSERT Noir,sucre,eau.<br/>Lavez, équeutez et mixez les fraises. Passez le coulis à la passoire fine.Faites chauffer l'eau et le sucre 2 à 3 minutes....		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">5h45</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="/recettes/selection_recette_fraise.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20170609/68298_w175h125c1cx2000cy3000.webp 175w,
+https://assets.afcdn.com/recipe/20170609/68298_w350h250c1cx2000cy3000.webp 350w,
+https://assets.afcdn.com/recipe/20170609/68298_w700h500c1cx2000cy3000.webp 2x,
+https://assets.afcdn.com/recipe/20170609/68298_w1050h750c1cx2000cy3000.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20170609/68298_w175h125c1cx2000cy3000.jpg 175w,
+https://assets.afcdn.com/recipe/20170609/68298_w350h250c1cx2000cy3000.jpg 350w,
+https://assets.afcdn.com/recipe/20170609/68298_w700h500c1cx2000cy3000.jpg 2x,
+https://assets.afcdn.com/recipe/20170609/68298_w1050h750c1cx2000cy3000.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20170609/68298_w175h125c1cx2000cy3000.jpg 175w,
+https://assets.afcdn.com/recipe/20170609/68298_w350h250c1cx2000cy3000.jpg 350w,
+https://assets.afcdn.com/recipe/20170609/68298_w700h500c1cx2000cy3000.jpg 2x,
+https://assets.afcdn.com/recipe/20170609/68298_w1050h750c1cx2000cy3000.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20170609/68298_w350h250c1cx2000cy3000.jpg" alt="all_contents" /></picture>
+		
+		
+
+				<ul class="recipe-card__tags">
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Recette de fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+								
+					<p class="recipe-card__subtitle">Sélection</p>
+		
+
+
+				
+		<div class="recipe-card__description">
+			Ce qui est cool avec la fraise c’est qu’on l’aime autant nature que cuisinée. On ne va pas se mentir, c’est plutôt un fruit sympa. Bah oui, rien de mieux qu’une bonne barquette de fraise pour terminer un repas ou...		</div>
+
+
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_smoothie-fraise-menthe_212490.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20190625/94250_w175h125c1cx2736cy1824cxt0cyt0cxb5472cyb3648.webp 175w,
+https://assets.afcdn.com/recipe/20190625/94250_w350h250c1cx2736cy1824cxt0cyt0cxb5472cyb3648.webp 350w,
+https://assets.afcdn.com/recipe/20190625/94250_w700h500c1cx2736cy1824cxt0cyt0cxb5472cyb3648.webp 2x,
+https://assets.afcdn.com/recipe/20190625/94250_w1050h750c1cx2736cy1824cxt0cyt0cxb5472cyb3648.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20190625/94250_w175h125c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 175w,
+https://assets.afcdn.com/recipe/20190625/94250_w350h250c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 350w,
+https://assets.afcdn.com/recipe/20190625/94250_w700h500c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 2x,
+https://assets.afcdn.com/recipe/20190625/94250_w1050h750c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20190625/94250_w175h125c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 175w,
+https://assets.afcdn.com/recipe/20190625/94250_w350h250c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 350w,
+https://assets.afcdn.com/recipe/20190625/94250_w700h500c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 2x,
+https://assets.afcdn.com/recipe/20190625/94250_w1050h750c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20190625/94250_w350h250c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Smoothie fraise-menthe" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20190625/94250_w350h250c1cx2736cy1824cxt0cyt0cxb5472cyb3648.jpg" data-recipe-id="212490" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Boisson</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Smoothie fraise-menthe</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.5</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 12 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, sucre, lait, yaourt, menthe.<br/>Assembler, mixer, servir frais !		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">5 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_gelee-de-fraise_71930.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20131106/38953_w175h125c1cx1728cy2592.webp 175w,
+https://assets.afcdn.com/recipe/20131106/38953_w350h250c1cx1728cy2592.webp 350w,
+https://assets.afcdn.com/recipe/20131106/38953_w700h500c1cx1728cy2592.webp 2x,
+https://assets.afcdn.com/recipe/20131106/38953_w1050h750c1cx1728cy2592.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20131106/38953_w175h125c1cx1728cy2592.jpg 175w,
+https://assets.afcdn.com/recipe/20131106/38953_w350h250c1cx1728cy2592.jpg 350w,
+https://assets.afcdn.com/recipe/20131106/38953_w700h500c1cx1728cy2592.jpg 2x,
+https://assets.afcdn.com/recipe/20131106/38953_w1050h750c1cx1728cy2592.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20131106/38953_w175h125c1cx1728cy2592.jpg 175w,
+https://assets.afcdn.com/recipe/20131106/38953_w350h250c1cx1728cy2592.jpg 350w,
+https://assets.afcdn.com/recipe/20131106/38953_w700h500c1cx1728cy2592.jpg 2x,
+https://assets.afcdn.com/recipe/20131106/38953_w1050h750c1cx1728cy2592.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20131106/38953_w350h250c1cx1728cy2592.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Gelée de Fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20131106/38953_w350h250c1cx1728cy2592.jpg" data-recipe-id="71930" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Confiserie</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Gelée de Fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.5</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 4 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, jus de pomme, citron, sucre en poudre, eau.<br/>Après avoir rincé et équeuté les fraises, les mettre dans une casserole avec le jus de pomme et les 30 cl d'eau. Porter doucement à ébullition et...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">40 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_smoothie-banane-fraise_80171.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20131009/64022_w175h125c1cx1481cy2290.webp 175w,
+https://assets.afcdn.com/recipe/20131009/64022_w350h250c1cx1481cy2290.webp 350w,
+https://assets.afcdn.com/recipe/20131009/64022_w700h500c1cx1481cy2290.webp 2x,
+https://assets.afcdn.com/recipe/20131009/64022_w1050h750c1cx1481cy2290.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20131009/64022_w175h125c1cx1481cy2290.jpg 175w,
+https://assets.afcdn.com/recipe/20131009/64022_w350h250c1cx1481cy2290.jpg 350w,
+https://assets.afcdn.com/recipe/20131009/64022_w700h500c1cx1481cy2290.jpg 2x,
+https://assets.afcdn.com/recipe/20131009/64022_w1050h750c1cx1481cy2290.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20131009/64022_w175h125c1cx1481cy2290.jpg 175w,
+https://assets.afcdn.com/recipe/20131009/64022_w350h250c1cx1481cy2290.jpg 350w,
+https://assets.afcdn.com/recipe/20131009/64022_w700h500c1cx1481cy2290.jpg 2x,
+https://assets.afcdn.com/recipe/20131009/64022_w1050h750c1cx1481cy2290.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20131009/64022_w350h250c1cx1481cy2290.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Smoothie banane-fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20131009/64022_w350h250c1cx1481cy2290.jpg" data-recipe-id="80171" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Dessert</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Smoothie banane-fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.8</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 6 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : banane, fraises, fromage blanc.<br/>Mettre tous les ingrédients dans le bol d'un mixer et en avant pour 3 min, le temps de réveiller les enfants! Verser dans de joli mugs et servir avec une paille. Les ados...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">5 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a id="brand-recipe-card__9"onclick="af_ua_trackEvent('Statistics', 'BrandRecipe - Click', '[Petits plats en équilibre] Sorbet fraise-basilic par Laurent Mariotte');" class="recipe-card-link" href="/recettes/recette_sorbet-fraise-basilic-par-laurent-mariotte_527825.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20200630/112305_w175h125c1cx960cy540.png 175w,
+https://assets.afcdn.com/recipe/20200630/112305_w350h250c1cx960cy540.png 350w,
+https://assets.afcdn.com/recipe/20200630/112305_w700h500c1cx960cy540.png 2x,
+https://assets.afcdn.com/recipe/20200630/112305_w1050h750c1cx960cy540.png 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20200630/112305_w175h125c1cx960cy540.png 175w,
+https://assets.afcdn.com/recipe/20200630/112305_w350h250c1cx960cy540.png 350w,
+https://assets.afcdn.com/recipe/20200630/112305_w700h500c1cx960cy540.png 2x,
+https://assets.afcdn.com/recipe/20200630/112305_w1050h750c1cx960cy540.png 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20200630/112305_w175h125c1cx960cy540.png 175w,
+https://assets.afcdn.com/recipe/20200630/112305_w350h250c1cx960cy540.png 350w,
+https://assets.afcdn.com/recipe/20200630/112305_w700h500c1cx960cy540.png 2x,
+https://assets.afcdn.com/recipe/20200630/112305_w1050h750c1cx960cy540.png 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20200630/112305_w350h250c1cx960cy540.png" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Sorbet fraise-basilic par Laurent Mariotte" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20200630/112305_w350h250c1cx960cy540.png" data-recipe-id="527825" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Dessert</li>
+											</ul>
+	</div>
+
+	<div>
+					<div class="recipe-card__sponsored">
+				<span class="mrtn-tag mrtn-tag--orange recipe-card__sponsored__tag">sponsorisé</span>
+				<hr>
+			</div>
+						<h4 class="recipe-card__title">Sorbet fraise-basilic par Laurent Mariotte</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 0</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 0 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises parfumées (ciflorette, charlotte…),basilic frais,sucre de canne,jus de citron.<br/>La veille, préparez un sirop : portez le sucre et 10 cl d’eau à ébullition avec...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">15 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_liqueur-de-fraise_39054.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20150831/39993_w175h125c1cx1900cy1258.webp 175w,
+https://assets.afcdn.com/recipe/20150831/39993_w350h250c1cx1900cy1258.webp 350w,
+https://assets.afcdn.com/recipe/20150831/39993_w700h500c1cx1900cy1258.webp 2x,
+https://assets.afcdn.com/recipe/20150831/39993_w1050h750c1cx1900cy1258.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20150831/39993_w175h125c1cx1900cy1258.jpg 175w,
+https://assets.afcdn.com/recipe/20150831/39993_w350h250c1cx1900cy1258.jpg 350w,
+https://assets.afcdn.com/recipe/20150831/39993_w700h500c1cx1900cy1258.jpg 2x,
+https://assets.afcdn.com/recipe/20150831/39993_w1050h750c1cx1900cy1258.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20150831/39993_w175h125c1cx1900cy1258.jpg 175w,
+https://assets.afcdn.com/recipe/20150831/39993_w350h250c1cx1900cy1258.jpg 350w,
+https://assets.afcdn.com/recipe/20150831/39993_w700h500c1cx1900cy1258.jpg 2x,
+https://assets.afcdn.com/recipe/20150831/39993_w1050h750c1cx1900cy1258.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20150831/39993_w350h250c1cx1900cy1258.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Liqueur de fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20150831/39993_w350h250c1cx1900cy1258.jpg" data-recipe-id="39054" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Boisson</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Liqueur de fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 3.6</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 7 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : vin rosé, sucre, fraises, eau.<br/>Faire chauffer le vin à feu doux. A ébullition, l'arrêter et verser sur les fraises entières, puis couvrir d'un tochon et laisser reposer 48 heures. Filtrer le jus à...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">2 j 20 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_margarita-fraise_12483.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20160517/3167_w175h125c1cx1500cy1000.webp 175w,
+https://assets.afcdn.com/recipe/20160517/3167_w350h250c1cx1500cy1000.webp 350w,
+https://assets.afcdn.com/recipe/20160517/3167_w700h500c1cx1500cy1000.webp 2x,
+https://assets.afcdn.com/recipe/20160517/3167_w1050h750c1cx1500cy1000.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20160517/3167_w175h125c1cx1500cy1000.jpg 175w,
+https://assets.afcdn.com/recipe/20160517/3167_w350h250c1cx1500cy1000.jpg 350w,
+https://assets.afcdn.com/recipe/20160517/3167_w700h500c1cx1500cy1000.jpg 2x,
+https://assets.afcdn.com/recipe/20160517/3167_w1050h750c1cx1500cy1000.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20160517/3167_w175h125c1cx1500cy1000.jpg 175w,
+https://assets.afcdn.com/recipe/20160517/3167_w350h250c1cx1500cy1000.jpg 350w,
+https://assets.afcdn.com/recipe/20160517/3167_w700h500c1cx1500cy1000.jpg 2x,
+https://assets.afcdn.com/recipe/20160517/3167_w1050h750c1cx1500cy1000.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20160517/3167_w350h250c1cx1500cy1000.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Margarita fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20160517/3167_w350h250c1cx1500cy1000.jpg" data-recipe-id="12483" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Boisson</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Margarita fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 3.8</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 4 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, téquila, glace pilée.<br/>Lavez et équeutez les fraises, passez les au mixer. Versez la préparation dans un shaker, ajoutez la tequila et le triple sec. Servez dans un broc à eau comme long...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">10 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_terrine-fraise-chocolat-blanc_69428.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20160401/23804_w175h125c1cx1540cy2325.webp 175w,
+https://assets.afcdn.com/recipe/20160401/23804_w350h250c1cx1540cy2325.webp 350w,
+https://assets.afcdn.com/recipe/20160401/23804_w700h500c1cx1540cy2325.webp 2x,
+https://assets.afcdn.com/recipe/20160401/23804_w1050h750c1cx1540cy2325.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20160401/23804_w175h125c1cx1540cy2325.jpg 175w,
+https://assets.afcdn.com/recipe/20160401/23804_w350h250c1cx1540cy2325.jpg 350w,
+https://assets.afcdn.com/recipe/20160401/23804_w700h500c1cx1540cy2325.jpg 2x,
+https://assets.afcdn.com/recipe/20160401/23804_w1050h750c1cx1540cy2325.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20160401/23804_w175h125c1cx1540cy2325.jpg 175w,
+https://assets.afcdn.com/recipe/20160401/23804_w350h250c1cx1540cy2325.jpg 350w,
+https://assets.afcdn.com/recipe/20160401/23804_w700h500c1cx1540cy2325.jpg 2x,
+https://assets.afcdn.com/recipe/20160401/23804_w1050h750c1cx1540cy2325.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20160401/23804_w350h250c1cx1540cy2325.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Terrine fraise chocolat blanc" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20160401/23804_w350h250c1cx1540cy2325.jpg" data-recipe-id="69428" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Dessert</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Terrine fraise chocolat blanc</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-half icon-icon_star_halfempty mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span><span class="icon-star-full-active icon-icon_star_full mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 4.6</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 125 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : palets bretons, beurre, chocolat blanc, fromage blanc, lait, fraises, gélatine.<br/>Pensez à préparer le dessert la veille ou le matin pour le dîner. Tapissez un moule à cake de film alimentaire....		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">30 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a  class="recipe-card-link" href="https://www.marmiton.org/recettes/recette_smoothie-poire-fraise_528163.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20200722/112836_w175h125c1cx262cy350cxt0cyt0cxb525cyb700.webp 175w,
+https://assets.afcdn.com/recipe/20200722/112836_w350h250c1cx262cy350cxt0cyt0cxb525cyb700.webp 350w,
+https://assets.afcdn.com/recipe/20200722/112836_w700h500c1cx262cy350cxt0cyt0cxb525cyb700.webp 2x,
+https://assets.afcdn.com/recipe/20200722/112836_w1050h750c1cx262cy350cxt0cyt0cxb525cyb700.webp 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20200722/112836_w175h125c1cx262cy350cxt0cyt0cxb525cyb700.jpg 175w,
+https://assets.afcdn.com/recipe/20200722/112836_w350h250c1cx262cy350cxt0cyt0cxb525cyb700.jpg 350w,
+https://assets.afcdn.com/recipe/20200722/112836_w700h500c1cx262cy350cxt0cyt0cxb525cyb700.jpg 2x,
+https://assets.afcdn.com/recipe/20200722/112836_w1050h750c1cx262cy350cxt0cyt0cxb525cyb700.jpg 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20200722/112836_w175h125c1cx262cy350cxt0cyt0cxb525cyb700.jpg 175w,
+https://assets.afcdn.com/recipe/20200722/112836_w350h250c1cx262cy350cxt0cyt0cxb525cyb700.jpg 350w,
+https://assets.afcdn.com/recipe/20200722/112836_w700h500c1cx262cy350cxt0cyt0cxb525cyb700.jpg 2x,
+https://assets.afcdn.com/recipe/20200722/112836_w1050h750c1cx262cy350cxt0cyt0cxb525cyb700.jpg 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20200722/112836_w350h250c1cx262cy350cxt0cyt0cxb525cyb700.jpg" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Smoothie poire fraise" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20200722/112836_w350h250c1cx262cy350cxt0cyt0cxb525cyb700.jpg" data-recipe-id="528163" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Boisson</li>
+											</ul>
+	</div>
+
+	<div>
+						<h4 class="recipe-card__title">Smoothie poire fraise</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 0</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 0 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraises, poire, glaçons.<br/>Mixer les fraises ainsi que la poire. Broyer les glaçons. Mixer le tout. À boire frais avec une paille et si vous voulez avec de la menthe.		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">10 min</span>
+		</div>
+		
+	</div>
+
+</a></div>
+
+<div class="recipe-card">
+<a id="brand-recipe-card__14"onclick="af_ua_trackEvent('Statistics', 'BrandRecipe - Click', '[Petits plats en équilibre] Fraise de veau à l\'asiatique par Laurent Mariotte');" class="recipe-card-link" href="/recettes/recette_fraise-de-veau-a-l-asiatique-par-laurent-mariotte_528934.aspx">
+
+	<div class="recipe-card__picture">
+
+		
+		<picture data-lazyload="true">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20201103/115278_w175h125c1cx947cy608.png 175w,
+https://assets.afcdn.com/recipe/20201103/115278_w350h250c1cx947cy608.png 350w,
+https://assets.afcdn.com/recipe/20201103/115278_w700h500c1cx947cy608.png 2x,
+https://assets.afcdn.com/recipe/20201103/115278_w1050h750c1cx947cy608.png 3x" sizes="350px" type="image/webp">
+						<source srcset="https://static.afcdn.com/relmrtn/lazyload.png" data-srcset="https://assets.afcdn.com/recipe/20201103/115278_w175h125c1cx947cy608.png 175w,
+https://assets.afcdn.com/recipe/20201103/115278_w350h250c1cx947cy608.png 350w,
+https://assets.afcdn.com/recipe/20201103/115278_w700h500c1cx947cy608.png 2x,
+https://assets.afcdn.com/recipe/20201103/115278_w1050h750c1cx947cy608.png 3x" sizes="350px" type="image/jpeg"><img class="lazyload "data-srcset="https://assets.afcdn.com/recipe/20201103/115278_w175h125c1cx947cy608.png 175w,
+https://assets.afcdn.com/recipe/20201103/115278_w350h250c1cx947cy608.png 350w,
+https://assets.afcdn.com/recipe/20201103/115278_w700h500c1cx947cy608.png 2x,
+https://assets.afcdn.com/recipe/20201103/115278_w1050h750c1cx947cy608.png 3x" sizes="350px" src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://assets.afcdn.com/recipe/20201103/115278_w350h250c1cx947cy608.png" alt="recipe" /></picture>
+		
+									<span class="recipe-card__add-to-notebook connectedUsersOnly" data-recipe-title="Fraise de veau à l'asiatique par Laurent Mariotte" data-recipe-thumbnail="https://assets.afcdn.com/recipe/20201103/115278_w350h250c1cx947cy608.png" data-recipe-id="528934" >
+					<i class="icon-icon_heart"></i>
+				</span>
+					
+
+				<ul class="recipe-card__tags">
+							<li class="mrtn-tag mrtn-tag--dark">Plat principal</li>
+											</ul>
+	</div>
+
+	<div>
+					<div class="recipe-card__sponsored">
+				<span class="mrtn-tag mrtn-tag--orange recipe-card__sponsored__tag">sponsorisé</span>
+				<hr>
+			</div>
+						<h4 class="recipe-card__title">Fraise de veau à l'asiatique par Laurent Mariotte</h4>
+		<hr class="recipe-card__title-separator">
+
+									<div class="recipe-card__rating">
+				<div class="mrtn-stars" data-mode=readonly><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span><span class="icon-star-empty icon-icon_star_empty mrtn-star"></span></div>				<div class="recipe-card__rating__score">
+					<span class="recipe-card__rating__value"> 0</span>&nbsp;<span class="recipe-card__rating__value__fract">/&nbsp;5</span>
+				</div>
+					<span class="mrtn-font-discret">sur 0 avis</span>
+			</div>
+				
+		
+
+
+				
+		<div class="recipe-card__description">
+			<b>Ingrédients</b> : fraise de veau,vinaigre d'alcool,miel de fleurs,vinaigre de cidre,échalote,carotte,gingembre (1 pousse),sauce soja,sauce nuoc mam,orange,huile d'arachide,coriandre,gros sel...		</div>
+
+
+				<div class="recipe-card__duration">
+			<i class="icon-icon_time"></i>&nbsp; <span class="recipe-card__duration__value">1h50</span>
+		</div>
+		
+	</div>
+
+</a></div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="recipe-search__col-right" class="recipe-search__col-right desktop-show tablet-show">
+						<div class="af-col-right" id="sticky-col-right">
+										<div class="mrtn_format mrtn-hide-on-print">
+							<script type="text/javascript">
+            if (window.afAd) {
+                afAd.render("300_atf", {"hasRefresh":true,"refreshParams":{"mode":"auto","refreshAdsInterval":15000}});
+            }
+        </script>						</div>
+							</div>
+
+	</div>
+
+</div>
+
+<nav class="af-pagination " role="navigation"><ul><li class="selected"><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=0&amp;page=1">1</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=12&amp;page=2">2</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=24&amp;page=3">3</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=36&amp;page=4">4</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=48&amp;page=5">5</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=60&amp;page=6">6</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=72&amp;page=7">7</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=84&amp;page=8">8</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=96&amp;page=9">9</a></li><div class="showMorePages" style="display: none;"><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=108&amp;page=10">10</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=228&amp;page=20">20</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=348&amp;page=30">30</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=468&amp;page=40">40</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=588&amp;page=50">50</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=708&amp;page=60">60</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=828&amp;page=70">70</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=948&amp;page=80">80</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=1068&amp;page=90">90</a></li><li><a href="/recettes/recherche.aspx?type=all&amp;aqt=fraise&amp;start=1080&amp;page=91">91</a></li>            </div>
+            <div class="showMoreButton"
+                 onclick="af_showMorePaging('Voir plus','Voir moins');"
+            >Voir plus</div></ul></nav>
+<div class="mrtn-hide-on-print recipe-see-also__loading" style="margin-bottom: 20px;">
+    <div class="padded-content recipe__inspiration white-back">
+        <h2 class="recipe__inspiration__title">En panne d'inspiration ?</h2>
+		
+<script type="text/html" id="recipe-see-also-template">
+
+    <ul class="recipe-see-also__items">
+        <!-- <% items.forEach( function(item) {%> -->
+        <li class="recipe-see-also__item">
+            <a
+                onclick="af_ua_trackEvent(<%= item.ga.category %>, <%= item.ga.action %>, <%= item.ga.label %>)"
+                href="<%= item.url %>"
+            >
+                <div class="recipe-see-also__img-wrapper">
+                    <% if (item.img) { %>
+                    <img src="<%= item.img %>" alt="Recette" width="312" height="230">
+                    <% } else { %>
+                    <img src="<%= recipeSeeAlsoDefaultPictures[Math.floor(Math.random() * array.length)] %>" alt="Recette" width="312" height="230">
+                    <% }; %>
+
+                    <span class="recipe-see-also__category"><%= item.category %></span>
+                </div>
+                <h4 class="recipe-see-also__title"><%= item.title %></h4>
+
+                <ul class="recipe-see-also__tags">
+                    <!-- <% item.tags.forEach( function(tag) { %> -->
+                    <li class="mrtn-tag"><%= tag.name %></li>
+                    <!-- <% });%> -->
+                </ul>
+
+            </a>
+        </li>
+        <!-- <% });%> -->
+    </ul>
+
+</script>
+
+<div class="recipe-see-also recipe-see-also__RecipeSearchSeeAlso">
+    <img  class="" src="https://static.afcdn.com/relmrtn/Front/assets/img/loader.svg" alt=""></div>
+
+    </div>
+</div>
+
+
+
+<script type="text/html" id="addToCookbook-success-template">
+	<div class="noty-with-icon noty-with-icon--recipe-picture">
+		<a class="noty__main-link" href="/espace-perso/mon-carnet-de-recettes.aspx">
+			<div class="noty-icon ">
+                <!-- <%if(recipePicture){%> -->
+                <img class="" src="<%=recipePicture%>" />
+                <!-- <%} else {%> -->
+                <img class="" src="https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_7.jpg" />
+                <!-- <%}%> -->
+			</div>
+			<!-- <%if(cookbookName){%> -->
+				<p class="noty__message">Cette fiche a bien été ajoutée au carnet &laquo;&nbsp;<%=cookbookName%>&nbsp;&raquo;</p>
+			<!-- <%} else {%> -->
+				<p class="noty__message">Cette fiche a bien été ajoutée au carnet</p>
+			<!-- <%}%> -->
+			<span class="noty__link-label">Voir la fiche dans mon carnet</span>
+		</a>
+	</div>
+</script>
+
+<script type="text/html" id="cookbooks-list-template">
+	<ul class="recipe__cookbooks-list recipe__cookbooks-list-modal mrtn-scrollable mrtn-modal__simple-list"><!--
+		<%Categories.forEach(function(cookbook){%>
+			--><li class="recipe-memo__cookbooks-list__item connectedUsersOnly mrtn-modal__simple-list__item mrtn-scrollable" data-cookbook-label="<%=cookbook.Title%>" data-cookbook-id="<%=cookbook.Id%>">
+				<div class="mrtn-mosaique mrtn-mosaique--1-2 recipe-memo__cookbooks-list__item-mosaique">
+                    <%var length = cookbook.Recipes.length, height = length > 1 ? '50%' : '100%', width = length > 2 ? '50%' : '100%', counter = length < 2 ? 1 : (length === 2 ? 2 : 3);%>
+                    <%for(var i = 0; i < counter; ++i){%>
+						<% var src=cookbook.Recipes && cookbook.Recipes[i] && cookbook.Recipes[i].PictureUrl ? cookbook.Recipes[i].PictureUrl : 'https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_5.jpg';%>
+						<img src="<%=src%>" style="height: <%=height%>; width: <%=width%>;" />
+					<%}%>
+				</div>
+				<p><%=cookbook.Title%></p>
+				<%var plur = cookbook.Recipes && cookbook.Recipes.length > 1 ? 's' : ''; %>
+				<p><%=cookbook.Recipes ? cookbook.Recipes.length + ' fiche' + plur : '0 fiche' %></p>
+			</li><!--
+		<% });%>
+	--></ul>
+</script>
+
+
+<div class="mrtn-modal cookbookAdd__modal mrtn-modal--close">
+	<nav class="mrtn-modal--with-head-picture">
+		<img class="cookbookAdd__modal__recipe-picture mrtn-modal--with-head-picture__picture" src="https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_5_w56h56c1.jpg" />
+		<div class="mrtn-modal--with-head-picture__title-container">
+			<p class="mrtn-modal-title">Ajouter à mes carnets</p>
+			<p class="cookbookAdd__modal__title-comp">
+				la recette				<span class="cookbookAdd__modal__recipe-title mrtn-modal-sub-title"></span>
+			</p>
+		</div>
+		<span class="modal__nav--close">
+			<i class="icon-icon_cross_big"></i>
+		</span>
+	</nav>
+	<hr class="recipe-separator" />
+	<div class="padded-content">
+		<p class="mrtn-modal-title">
+			Choisir un carnet			<span class="recipe__cookbooks-nb"></span>
+		</p>
+		<div class="clear"></div>
+		<div class="recipe__cookbooks-container"></div>
+
+		<p class="mrtn-text-center">
+			<span class="mrtn-btn mrtn-btn-primary recipe__cookbooks__add__save-btn mrtn-btn-text-only">J'ajoute la recette à mes carnets</span>
+		</p>
+	</div>
+</div>
+
+
+
+
+
+<div id="noty-container"></div>		</div>
+
+		<script type="text/javascript">
+            if (window.afAd) {
+                afAd.render("banner_btf", []);
+            }
+        </script><script type="text/javascript">
+            if (window.afAd) {
+                afAd.render("dhtml", []);
+            }
+        </script>		
+		<div id="partner-content-container-footer" class=" mrtn-hide-on-print"></div>
+		<footer class="no-print" id="mrtn-footer">
+	<div class="foot-content">
+		<div class="go-to-top">
+			<i class="icon-rot-180 icon-icon_arrow_bottom mrtn-text-center"></i>
+		</div>
+		<p class="socials-items mrtn-text-center">
+			<a href="https://fr.pinterest.com/marmiton/" class="_blank social-icon-holder">
+				<i class="icon-pinterest"></i>
+			</a>
+			<a href="https://www.facebook.com/marmiton" class="_blank social-icon-holder">
+				<i class="icon-facebook"></i>
+			</a>
+			<a href="https://www.instagram.com/marmiton_org/" class="_blank social-icon-holder">
+				<i class="icon-instagram"></i>
+			</a>
+			<a href="https://www.youtube.com/user/marmitonofficiel" class="social-icon-holder">
+				<i class="icon-youtube"></i>
+			</a>
+			<a href="https://assistant.google.com/services/invoke/uid/00000058f69ad4c0" class="_blank social-icon-holder">
+				<i class="icon-googleassistant"></i>
+			</a>
+		</p>
+		<div class="padded-content">
+			<div class="mrtn-autopromo-ctnr">
+				<a href="http://m.onelink.me/b78587d4" class="_blank mrtn-autopromo">
+					<span class="img-iphone">
+						<img class="lazyload "src="https://static.afcdn.com/relmrtn/lazyload.png" data-src="https://static.afcdn.com/relmrtn/Front/Component/footerLight/assets/iPhone.png" alt="Iphone" />					</span>
+					<p class="title-4">Retrouvez Marmiton où que vous soyez en téléchargeant l'application</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="endFooter-desktop">
+				<div class="foot-content">
+			<p class="mrtn-text-center">Concocté avec ♥ par Marmiton</p>
+			<div class="foot-content padded-content">
+				<div class="last-links">
+					<p>Tous droits réservés Marmiton.org - 1999-2021</p>
+					<p><a href="https://marmiton.welcomekit.co/" class="_blank">Recrutement</a> ● <a href="https://www.marmiton.org/sp/aide/mentions-legales.html">Mentions légales</a> ● <a href="https://www.marmiton.org/sp/aide/conditions-generales-utilisation.html">Conditions Générales d'Utilisation</a> ● <a href="/contact">Vos questions</a> ● <a href="https://www.marmiton.org/aide/faq-foire-aux-questions-s4005514.html">FAQ</a> ● <a href="https://corporate.aufeminin.com/fr/contact#marmiton">Contact</a> ● <a href="https://www.marmiton.org/aide/polique-relative-aux-cookies-sur-les-services-edites-par-la-societe-marmiton-s3007308.html">Politique de protection des données personnelles</a> ● <a href="https://www.marmiton.org/aide/politique-de-protection-des-donnees-de-marmiton-s3007453.html">Politique de confidentialité</a> ● <a href="javascript:showCmpPreferencesPopup()">Préférences cookies</a></p>
+					<p>Pour des milliers de cocktails : <a href="http://www.1001cocktails.com">1001cocktails.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript" crossorigin="anonymous" src="https://static.afcdn.com/relmrtn/concat.js?PCM-nVRNb8IwDP01HFdRtsMuO7BOnEBCgLhOITFtII2zJB3qv59bGKJRShFSP2y_51fLdbwFLdCOJjNW7emZK9wx9c2xLFEnB_ex_ccPPxXY-mokAnlVgvYrYKJOStlld9QEuKNHEyGw_dpLfqwzVA26ZDlsagOEWOCyNTyURjEPL6BzqSFKWwOzvAjchplhaVBTlTcYTJXD0A_JHPG4o3sqxAIFU5FQmKLR15dX36ebsmZSebAuGn02z1H_FHAvz__sKYnhxAVa6AWG0zPqndT5PWxYZFmgx37kAQELhlnWtGojS3iE84AoszTGlWJWtjMwwBgW_KxEDvegYYk5_ILqR4YFvqQrIqesC4YyhtEhbTvXcUKa88y6FUHtPNx48bLm0vk1tzTkkVCTUnhv3Oh1SjBdpwRI0ie0xZp91Qz8qWAm1N4jNt2QeRF4IbGgFQf2asRrzLDSvmV1_JCs8KJ1NghOJuNJOp6M39O3NP0D"></script>
+<script type="text&#x2F;javascript" src="https&#x3A;&#x2F;&#x2F;api.flymenu.fr&#x2F;js&#x2F;flymenu.js"></script>
+<script type="text/javascript">const flymenuMrtnParams = {"site_token":"5106fa009eb671026002582f335758f7f86f5e9d13eea93ddfba9cb20cd2e5749851ed15c39fdf480a08b4328c286a8c6e9a","flymenuWidgetId":"flymenu-widget__content","session_lifetime":6440,"autoClose":false,"emptyCartPlaceholderHTML":"Votre panier est vide","emptyCartImageSrc":".\/Front\/Component\/header\/assets\/logo.png","showOrderButtonOnRecipeList":true}</script>
+<script type="text/javascript" crossorigin="anonymous" src="https://static.afcdn.com/relmrtn/concat.js?PCM-c87PLcjPS80rUTVyS8upzE3NK0WwdHMTi3IzS_Lz9LKKbZ2RVGakJqakFvlkpmeAeKnp6cX4VSDx0BXmVgalJmcWpBYHZ-QXFGTmpftkFpdAhQhIA43SMzIwMjQwMrAwNDE0BAA"></script>
+<script type="text/javascript">
+ jquery$(function(){
+ window.af_disableHeaderShrinking = true;
+ var appAufHeader = new AufHeader();
+ appAufHeader.init({
+ searchPlaceholder: "Search"
+ });
+ });
+</script>
+<script type="text/javascript">
+ af_addEvent(window, 'scroll', af_lazyloading, false);
+ af_addEvent(window, 'load', af_lazyloading, false);
+ </script>
+<script type="text/javascript">if (_eStat_Whap_loaded) { eStatWhap.serial('800000206973'); }</script>
+<script type="text/javascript">
+ function af_callAudienceTrackers() {
+ // NIELSEN
+ if (typeof NolTracker !== 'undefined') { trac.record().post(); } // IT
+ if (typeof _eStat_Whap_loaded !== 'undefined' && _eStat_Whap_loaded) { eStatWhap.send(); } // Others
+ }
+
+ (function() {
+ window.didomiOnReady = window.didomiOnReady || [];
+ window.didomiOnReady.push(function addTrackersIfConsentGiven(Didomi) {
+ if (Didomi.getUserConsentStatusForPurpose('measure_content_performance') === true) {
+ af_callAudienceTrackers();
+ }
+ });
+ window.didomiEventListeners = window.didomiEventListeners || [];
+ window.didomiEventListeners.push({
+ event: 'consent.changed',
+ listener: function() {
+ if (Didomi.getUserConsentStatusForPurpose('measure_content_performance') === true) {
+ af_callAudienceTrackers();
+ }
+ }
+ });
+ }());
+</script>
+<script type="text/javascript">
+ af_addEvent(document, 'click', ga_trackOutboundLink, false);
+</script>
+<script type="text/javascript">
+ var cookbookModalMessages={"status_200":{"message":"La recette a \u00e9t\u00e9 ajout\u00e9e au carnet","link":"http:\/\/www.google.fr"},"status_400":{"message":"Une erreur est survenue durant l'ajout au carnet"}};
+ 
+ if(Mrtn && Mrtn.USER && Mrtn.USER.id) {
+ var cookbookAddModal = new Mrtn.CookbookAddModal();
+ }
+ </script>
+<script type="text/javascript">var recipeSeeAlso__RecipeSearchSeeAlso = new Mrtn.RecipeSeeAlso({
+ "container": "recipe-see-also__RecipeSearchSeeAlso",
+ "forceDefaultItems": false,
+ "defaultItems": [],
+ "defaultPictures": [
+ "https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_8_w312h230c1.jpg",
+ "https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_8_w312h230c1.jpg",
+ "https://assets.afcdn.com/recipe/20100101/recipe_default_img_blurred_9_w312h230c1.jpg",
+ ]
+ });</script>
+<script type="text/javascript">
+ var appBrandRecipesSearch = new MrtnBrandRecipesSearch();
+ appBrandRecipesSearch.init({
+ cardResults: [{"id":"51-25640","type":"recipe","title":"confiture de fraise","description":"confiture de fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20130627\/10325_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_confiture-de-fraise_25640.aspx","properties":{"recipe_id":25640,"rating_average":4.0999999999999996,"nb_rating":81,"duration":4500,"dish_type":"Confiserie","is_brand_recipe":false,"ingredient_list":"fraises, sucre, citron, confiture.","preparation_list":"Presser le citron. Laver et essorer les fraises. Mettre les fraises, le jus de citron et le sucre dans une casserole et la placer sur le feu en tournant de temps en temps pour r\u00e9partir le sucre. D\u00e8s que le m\u00e9lange se met \u00e0 bouillir, baisser le feu et laisser cuire 1 heure et demi \u00e0 feu doux en tournant de temps en temps. Une fois termin\u00e9e, tourner la confiture pendant 1 \u00e0 2 minutes, puis mettre en pots.","center_x":1250,"center_y":1875,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"l\u00e9lie"},"contentTypeId":51,"pos":0},{"id":"52-18566","type":"all_contents","title":"fraise","description":"fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20100101\/ingredient_default.jpg","url":"\/recettes\/index\/ingredient\/fraise","properties":{"subtitle":"Ingr\u00e9dient","subtitlePlurial":"Ingr\u00e9dients"},"contentTypeId":52,"pos":1},{"id":"51-10976","type":"recipe","title":"Panacotta \u00e0 la fraise","description":"Panacotta \u00e0 la fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20130719\/62958_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_panacotta-a-la-fraise_10976.aspx","properties":{"recipe_id":10976,"rating_average":4.5,"nb_rating":108,"duration":1500,"dish_type":"Dessert","is_brand_recipe":false,"ingredient_list":"cr\u00e8me liquide, sucre en poudre, g\u00e9latine, vanille, menthe, fraises.","preparation_list":"Verser la cr\u00e8me dans une casserole. Ajouter le sucre et la vanille. Porter \u00e0 \u00e9bullition en ne cessant de tourner avec une cuill\u00e8re en bois. Pendant ce temps, faire ramollir les feuilles de g\u00e9latine dans un bol d'eau fra\u00eeche. A l'\u00e9bullition, int\u00e9grer la g\u00e9latine. Verser le m\u00e9lange dans des ramequins et mettre au r\u00e9frig\u00e9rateur pendant 6 heures. D\u00e9mouler dans des assiettes \u00e0 dessert, ajouter le coulis fait avec les fraises. Laisser refroidir. Une feuille de menthe et une fraise sur la panacotta, c'est pr\u00eat !","center_x":1504,"center_y":1000,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"Anonyme"},"contentTypeId":51,"pos":4},{"id":"51-55249","type":"recipe","title":"Coulis de fraise","description":"Coulis de fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20130614\/27010_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_coulis-de-fraise_55249.aspx","properties":{"recipe_id":55249,"rating_average":4.9000000000000004,"nb_rating":47,"duration":300,"dish_type":"Sauce","is_brand_recipe":false,"ingredient_list":"fraises, citron, sucre en poudre, eau.","preparation_list":"Dans un mixeur, mettre les fraises, le sucre et le jus de citron. Mixer et ajouter l'eau au fur et \u00e0 mesure. Passer au chinois \u00e9tamine pour \u00e9liminer les p\u00e9pins. C'est pr\u00eat, bon app\u00e9tit. Parfait pour accompagn\u00e9 tous vos dessert, en particulier la glace vanille.","center_x":256,"center_y":192,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"enzo_16933919"},"contentTypeId":51,"pos":5},{"id":"recipe_371365","type":"recipe","title":"B\u00e2tonnets glac\u00e9s fraise chocolat","description":"Lavez, \u00e9queutez et mixez les fraises. Passez le coulis \u00e0 la passoire fine.Faites chauffer l'eau et le sucre 2 \u00e0 3 minutes. Hors du feu, ajoutez le coulis de fraises.Versez dans les moules \u00e0 b\u00e2tonnets, refermez-les ou ajoutez le b\u00e2tonnet et laissez prendre au moins 5 heures au cong\u00e9lateur.Faites fondre 125 g de chocolat au bain-marie et hors du feu, ajoutez les 25 g restant r\u00e2p\u00e9.D\u00e9moulez les b\u00e2tonnets glac\u00e9s en faisant des pressions sur le moule et en passant la pointe d'un couteau tout autour.Trempez ou nappez la glace de chocolat fondu. Placez \u00e0 nouveau 30 minutes au cong\u00e9lateur soit en maintenant les b\u00e2tonnets debout ou couch\u00e9s sur du papier sulfuris\u00e9.","url_image":"https:\/\/assets.afcdn.com\/recipe\/20181227\/85142_origin.jpg","url":"\/recettes\/recette_batonnets-glaces-fraise-chocolat_371365.aspx","properties":{"recipe_id":371365,"recipe_guid":"92213389-455e-468c-8718-9968d0f17202","rating_average":1,"nb_rating":1,"duration":20700,"preparation_time":300,"cooking_time":600,"dish_type":"Dessert","dish_type_array":{"id":55,"name":"Dessert","token":"dessert","killed":false,"killed_date":null,"recipe_category_id":"2d65ed91-6e30-4912-ba58-821b5e1e18dc"},"is_brand_recipe":true,"is_vegetarian":0,"ingredient_list":"fraises,Chocolat NESTL\u00c9 DESSERT Noir,sucre,eau.","preparation_list":"Lavez, \u00e9queutez et mixez les fraises. Passez le coulis \u00e0 la passoire fine.Faites chauffer l'eau et le sucre 2 \u00e0 3 minutes. Hors du feu, ajoutez le coulis de fraises.Versez dans les moules \u00e0 b\u00e2tonnets, refermez-les ou ajoutez le b\u00e2tonnet et laissez prendre au moins 5 heures au cong\u00e9lateur.Faites fondre 125 g de chocolat au bain-marie et hors du feu, ajoutez les 25 g restant r\u00e2p\u00e9.D\u00e9moulez les b\u00e2tonnets glac\u00e9s en faisant des pressions sur le moule et en passant la pointe d'un couteau tout autour.Trempez ou nappez la glace de chocolat fondu. Placez \u00e0 nouveau 30 minutes au cong\u00e9lateur soit en maintenant les b\u00e2tonnets debout ou couch\u00e9s sur du papier sulfuris\u00e9.","picture_id":85142,"center_x":240,"center_y":168,"crop_x_top":0,"crop_y_top":0,"crop_x_bottom":480,"crop_y_bottom":337,"credits":"","author_name":"Nestl\u00e9 Dessert","is_season":0,"is_vegan":false,"lactose_free":1,"gluten_free":1,"main_video_id":null,"brand":{"id":90,"name":"Nestl\u00e9 Dessert","user_id":15888983,"website_url":null,"custom_url":null,"logo":"https:\/\/assets.afcdn.com\/recipe\/20170607\/68_w112.jpg","url_pixel_count":null,"modification_date":"2021-01-29T16:17:11+01:00","search_sponsored_start_index":10,"show_nutri_score":false,"show_environment_score":false,"taboola_enabled":true,"keywords":null,"sponso_indexes":[10]},"cost":{"id":1,"name":"bon march\u00e9","token":"bonmarche"},"difficulty":{"id":2,"name":"facile","token":"facile"},"validation_date":"2018-12-27T16:51:27+01:00"}},{"id":"53-417","type":"all_contents","title":"Recette de fraise","description":"Ce qui est cool avec la fraise c\u2019est qu\u2019on l\u2019aime autant nature que cuisin\u00e9e. On ne va pas se mentir, c\u2019est plut\u00f4t un fruit sympa. Bah oui, rien de mieux qu\u2019une bonne barquette de fraise pour terminer un repas ou grignoter un encas on est d\u2019accord. Pour autant, on appr\u00e9cie \u00e9galement un bon fraisier (lorsqu\u2019il est bien fait), ou une tarte aux fraises bien croustillante avec une bonne cr\u00e8me p\u00e2tissi\u00e8re. Oh oui on adore \u00e7a. Ca y est, on vous a mis l\u2019eau \u00e0 la bouche. C\u2019\u00e9tait un peu le but\u2026\r\n\r\nPar contre, on a un gros probl\u00e8me avec la fraise. Et pas des moindres. On ne peut pas la manger toute l\u2019ann\u00e9e. Et \u00e7a, c\u2019est quand m\u00eame hyper frustrant. Devoir attendre des mois et des mois avant de pouvoir croquer \u00e0 nouveau dedans\u2026 quel supplice\u00a0!\r\n\r\nEn attendant son retour fracassant, on vous laisse avec cette s\u00e9lection de recettes 100% fraise qui devraient vous inspirer, vous \u00e9moustiller et surtout vous donner l\u2019envie furieuse de cuisiner, d\u00e8s le mois d\u2019avril.","url_image":"https:\/\/assets.afcdn.com\/recipe\/20170609\/68298_origin.jpg","url":"\/recettes\/selection_recette_fraise.aspx","properties":{"center_x":2000,"center_y":3000,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"subtitle":"S\u00e9lection","subtitlePlurial":"S\u00e9lections"},"contentTypeId":53,"pos":7},{"id":"51-212490","type":"recipe","title":"Smoothie fraise-menthe","description":"Smoothie fraise-menthe","url_image":"https:\/\/assets.afcdn.com\/recipe\/20190625\/94250_origincxt0cyt0cxb5472cyb3648.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_smoothie-fraise-menthe_212490.aspx","properties":{"recipe_id":212490,"rating_average":4.5,"nb_rating":12,"duration":300,"dish_type":"Boisson","is_brand_recipe":false,"ingredient_list":"fraises, sucre, lait, yaourt, menthe.","preparation_list":"Assembler, mixer, servir frais !","center_x":2736,"center_y":1824,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"roxane_17635046"},"contentTypeId":51,"pos":8},{"id":"51-71930","type":"recipe","title":"Gel\u00e9e de Fraise","description":"Gel\u00e9e de Fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20131106\/38953_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_gelee-de-fraise_71930.aspx","properties":{"recipe_id":71930,"rating_average":4.5,"nb_rating":4,"duration":2400,"dish_type":"Confiserie","is_brand_recipe":false,"ingredient_list":"fraises, jus de pomme, citron, sucre en poudre, eau.","preparation_list":"Apr\u00e8s avoir rinc\u00e9 et \u00e9queut\u00e9 les fraises, les mettre dans une casserole avec le jus de pomme et les 30 cl d'eau. Porter doucement \u00e0 \u00e9bullition et laisser mijoter jusqu'\u00e0 ce que les fruits remontent \u00e0 la surface. Mettre le tout dans un tamis et faire \u00e9couler le jus dans un plat plac\u00e9 dessous (presser si n\u00e9cessaire). Mettre le jus obtenu avec sa m\u00eame quantit\u00e9 de sucre et le jus de citron dans une bassine \u00e0 confiture (moi personnellement j'utilise une casserole toute simple). Porter \u00e0 \u00e9bullition et laisser cuire 20 min. Mettre aussit\u00f4t dans des pots \u00e0 confiture, fermer et laisser refroidir.","center_x":1728,"center_y":2592,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"julia_16210630"},"contentTypeId":51,"pos":9},{"id":"51-80171","type":"recipe","title":"Smoothie banane-fraise","description":"Smoothie banane-fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20131009\/64022_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_smoothie-banane-fraise_80171.aspx","properties":{"recipe_id":80171,"rating_average":4.7999999999999998,"nb_rating":6,"duration":300,"dish_type":"Dessert","is_brand_recipe":false,"ingredient_list":"banane, fraises, fromage blanc.","preparation_list":"Mettre tous les ingr\u00e9dients dans le bol d'un mixer et en avant pour 3 min, le temps de r\u00e9veiller les enfants! Verser dans de joli mugs et servir avec une paille. Les ados adorent au petit d\u00e9j! On peut ajouter des cornflakes.","center_x":1481,"center_y":2290,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"romina_15412838"},"contentTypeId":51,"pos":10},{"id":"recipe_527825","type":"recipe","title":"Sorbet fraise-basilic par Laurent Mariotte","description":"La veille, pr\u00e9parez un sirop : portez le sucre et 10 cl d\u2019eau \u00e0 \u00e9bullition avec les feuilles de basilic jusqu\u2019\u00e0 ce que le sucre soit totalement dissout (10 minutes). Laissez refroidir.Le jour m\u00eame : rincez et \u00e9queutez les fraises. Placez-les dans le bol d\u2019un mixeur. Versez le sirop au basilic au travers d\u2019un tamis puis pressez le citron.Mixez jusqu\u2019\u00e0 obtenir une pr\u00e9paration lisse et versez dans un moule \u00e0 cake au travers d\u2019un tamis. Placez dans le cong\u00e9lateur pendant 3 heures.D\u00e9moulez le sorbet et mixez-le de nouveau pour \u00e9liminer les cristaux.Replacez dans le moule \u00e0 cake, recouvrez d\u2019un film alimentaire et replacez au cong\u00e9lateur pendant 1 heure.Entreposez le sorbet dans le r\u00e9frig\u00e9rateur 10 \u00e0 15 minutes avant de le d\u00e9guster.","url_image":"https:\/\/assets.afcdn.com\/recipe\/20200630\/112305_origin.png","url":"\/recettes\/recette_sorbet-fraise-basilic-par-laurent-mariotte_527825.aspx","properties":{"recipe_id":527825,"recipe_guid":"cd698dc6-4e9b-4bc3-aaaf-9a9eff459748","rating_average":0,"nb_rating":0,"duration":900,"preparation_time":900,"cooking_time":0,"dish_type":"Dessert","dish_type_array":{"id":55,"name":"Dessert","token":"dessert","killed":false,"killed_date":null,"recipe_category_id":"2d65ed91-6e30-4912-ba58-821b5e1e18dc"},"is_brand_recipe":true,"is_vegetarian":1,"ingredient_list":"fraises parfum\u00e9es (ciflorette, charlotte\u2026),basilic frais,sucre de canne,jus de citron.","preparation_list":"La veille, pr\u00e9parez un sirop : portez le sucre et 10 cl d\u2019eau \u00e0 \u00e9bullition avec les feuilles de basilic jusqu\u2019\u00e0 ce que le sucre soit totalement dissout (10 minutes). Laissez refroidir.Le jour m\u00eame : rincez et \u00e9queutez les fraises. Placez-les dans le bol d\u2019un mixeur. Versez le sirop au basilic au travers d\u2019un tamis puis pressez le citron.Mixez jusqu\u2019\u00e0 obtenir une pr\u00e9paration lisse et versez dans un moule \u00e0 cake au travers d\u2019un tamis. Placez dans le cong\u00e9lateur pendant 3 heures.D\u00e9moulez le sorbet et mixez-le de nouveau pour \u00e9liminer les cristaux.Replacez dans le moule \u00e0 cake, recouvrez d\u2019un film alimentaire et replacez au cong\u00e9lateur pendant 1 heure.Entreposez le sorbet dans le r\u00e9frig\u00e9rateur 10 \u00e0 15 minutes avant de le d\u00e9guster.","picture_id":112305,"center_x":960,"center_y":540,"crop_x_top":0,"crop_y_top":0,"crop_x_bottom":1920,"crop_y_bottom":1080,"credits":"","author_name":"Petits plats en \u00e9quilibre","is_season":0,"is_vegan":true,"lactose_free":1,"gluten_free":1,"main_video_id":635818,"brand":{"id":294,"name":"Petits plats en \u00e9quilibre","user_id":20360835,"website_url":"https:\/\/petitsplatsenequilibre.fr\/","custom_url":null,"logo":"https:\/\/assets.afcdn.com\/recipe\/20200514\/111245_w112cxt0cyt0cxb1080cyb1080.png","url_pixel_count":null,"modification_date":"2021-01-18T14:48:52+01:00","search_sponsored_start_index":5,"show_nutri_score":false,"show_environment_score":false,"taboola_enabled":true,"keywords":null,"sponso_indexes":[5,10]},"cost":{"id":1,"name":"bon march\u00e9","token":"bonmarche"},"difficulty":{"id":2,"name":"facile","token":"facile"},"validation_date":"2020-07-01T13:01:05+02:00"}},{"id":"51-39054","type":"recipe","title":"Liqueur de fraise","description":"Liqueur de fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20150831\/39993_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_liqueur-de-fraise_39054.aspx","properties":{"recipe_id":39054,"rating_average":3.6000000000000001,"nb_rating":7,"duration":174000,"dish_type":"Boisson","is_brand_recipe":false,"ingredient_list":"vin ros\u00e9, sucre, fraises, eau.","preparation_list":"Faire chauffer le vin \u00e0 feu doux. A \u00e9bullition, l'arr\u00eater et verser sur les fraises enti\u00e8res, puis couvrir d'un tochon et laisser reposer 48 heures. Filtrer le jus \u00e0 l'aide d'un torchon, pour cela, verser le tout sur un torchon au dessus d'un saladier, puis presser le torchon de fa\u00e7on \u00e0 sortir le jus des fraises. Mettre \u00e0 chauffer le jus et quand il arrive \u00e0 \u00e9bullition, verser le sucre dedans et \u00e9teindre le feu puis remuer pour dissoudre le sucre. Ensuite, porter \u00e0 \u00e9bullition l'eau de vie (de fa\u00e7on \u00e0 lui enlever son go\u00fbt, si possible prendre de l'eau de vie jeune) pendant 30 secondes. Verser l'eau de vie dans le m\u00e9lange jus-sucre et remuer de temps en temps pour refroidir. Mettre en bouteilles et d\u00e9guster en kir ou sur une glace!","center_x":1900,"center_y":1258,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"adrien_16884686"},"contentTypeId":51,"pos":11},{"id":"51-12483","type":"recipe","title":"Margarita fraise","description":"Margarita fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20160517\/3167_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_margarita-fraise_12483.aspx","properties":{"recipe_id":12483,"rating_average":3.7999999999999998,"nb_rating":4,"duration":600,"dish_type":"Boisson","is_brand_recipe":false,"ingredient_list":"fraises, t\u00e9quila, glace pil\u00e9e.","preparation_list":"Lavez et \u00e9queutez les fraises, passez les au mixer. Versez la pr\u00e9paration dans un shaker, ajoutez la tequila et le triple sec. Servez dans un broc \u00e0 eau comme long drink.","center_x":1500,"center_y":1000,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"LeCoyote"},"contentTypeId":51,"pos":12},{"id":"51-69428","type":"recipe","title":"Terrine fraise chocolat blanc","description":"Terrine fraise chocolat blanc","url_image":"https:\/\/assets.afcdn.com\/recipe\/20160401\/23804_origin.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_terrine-fraise-chocolat-blanc_69428.aspx","properties":{"recipe_id":69428,"rating_average":4.5999999999999996,"nb_rating":125,"duration":1800,"dish_type":"Dessert","is_brand_recipe":false,"ingredient_list":"palets bretons, beurre, chocolat blanc, fromage blanc, lait, fraises, g\u00e9latine.","preparation_list":"Pensez \u00e0 pr\u00e9parer le dessert la veille ou le matin pour le d\u00eener. Tapissez un moule \u00e0 cake de film alimentaire. Emiettez ou \u00e9crasez au rouleau \u00e0 p\u00e2tisserie les biscuits. M\u00e9langez \u00e0 la spatule avec le beurre fondu, pour obtenir une p\u00e2te sableuse, comme pour un crumble. Garnissez le fond du moule avec cette pr\u00e9paration. Faites fondre le chocolat au bain-marie d'un c\u00f4t\u00e9 et chauffez le lait de l'autre. D\u00e9coupez les feuilles de g\u00e9latine en morceaux et faites-les ramollir dans de l'eau froide. Egouttez-les et incorporez-les au lait chaud. Lorsque la g\u00e9latine est fondue, ajoutez le chocolat fondu, puis le fromage blanc. Versez un peu de pr\u00e9paration dans le moule, ajoutez les fraises (enti\u00e8res ou en morceaux si elles sont trop grosses) puis le reste de la pr\u00e9paration. Placez au r\u00e9frig\u00e9rateur. Au moment de servir, d\u00e9moulez sur un plat et retirez doucement le film plastique.","center_x":1540,"center_y":2325,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"emmy_14091490"},"contentTypeId":51,"pos":13},{"id":"51-528163","type":"recipe","title":"Smoothie poire fraise","description":"Smoothie poire fraise","url_image":"https:\/\/assets.afcdn.com\/recipe\/20200722\/112836_origincxt0cyt0cxb525cyb700.jpg","url":"https:\/\/www.marmiton.org\/recettes\/recette_smoothie-poire-fraise_528163.aspx","properties":{"recipe_id":528163,"rating_average":0,"nb_rating":0,"duration":600,"dish_type":"Boisson","is_brand_recipe":false,"ingredient_list":"fraises, poire, gla\u00e7ons.","preparation_list":"Mixer les fraises ainsi que la poire. Broyer les gla\u00e7ons. Mixer le tout. \u00c0 boire frais avec une paille et si vous voulez avec de la menthe.","center_x":262,"center_y":350,"crop_x_top":null,"crop_y_top":null,"crop_x_bottom":null,"crop_y_bottom":null,"author_name":"gugus2929"},"contentTypeId":51,"pos":15},{"id":"recipe_528934","type":"recipe","title":"Fraise de veau \u00e0 l'asiatique par Laurent Mariotte","description":"Pr\u00e9chauffez le four \u00e0 170\u00b0C.Rincez la fraise de veau. Placez dans une casserole, recouvrez d\u2019eau froide, ajoutez le vinaigre d\u2019alcool et une poign\u00e9e de gros sel gris.Portez \u00e0 \u00e9bullition et laissez mijoter 10 minutes. Egouttez.Emincez finement les \u00e9chalotes et la carotte. Chauffez l\u2019huile d\u2019arachide dans une cocotte et faites suer les l\u00e9gumes 3 \u00e0 4 minutes.R\u00e2pez le zeste d\u2019une orange et pressez les jus de l\u2019ensemble.Ajoutez le miel et laissez blondir. D\u00e9glacez avec le vinaigre de cidre, les sauces asiatiques et le jus d\u2019orange. Ajoutez un peu de sel, du piment d\u2019Espelette, les zestes d\u2019orange et r\u00e2pez la moiti\u00e9 du gingembre.","url_image":"https:\/\/assets.afcdn.com\/recipe\/20201103\/115278_origin.png","url":"\/recettes\/recette_fraise-de-veau-a-l-asiatique-par-laurent-mariotte_528934.aspx","properties":{"recipe_id":528934,"recipe_guid":"744f488b-337a-4fe3-bc90-d0b4be193667","rating_average":0,"nb_rating":0,"duration":6600,"preparation_time":1800,"cooking_time":4800,"dish_type":"Plat principal","dish_type_array":{"id":51,"name":"Plat principal","token":"platprincipal","killed":false,"killed_date":null,"recipe_category_id":"b5489f97-b357-42e9-876f-541cfb53665d"},"is_brand_recipe":true,"is_vegetarian":0,"ingredient_list":"fraise de veau,vinaigre d'alcool,miel de fleurs,vinaigre de cidre,\u00e9chalote,carotte,gingembre (1 pousse),sauce soja,sauce nuoc mam,orange,huile d'arachide,coriandre,gros sel gris,sel gris fin,piment d'Espelette.","preparation_list":"Pr\u00e9chauffez le four \u00e0 170\u00b0C.Rincez la fraise de veau. Placez dans une casserole, recouvrez d\u2019eau froide, ajoutez le vinaigre d\u2019alcool et une poign\u00e9e de gros sel gris.Portez \u00e0 \u00e9bullition et laissez mijoter 10 minutes. Egouttez.Emincez finement les \u00e9chalotes et la carotte. Chauffez l\u2019huile d\u2019arachide dans une cocotte et faites suer les l\u00e9gumes 3 \u00e0 4 minutes.R\u00e2pez le zeste d\u2019une orange et pressez les jus de l\u2019ensemble.Ajoutez le miel et laissez blondir. D\u00e9glacez avec le vinaigre de cidre, les sauces asiatiques et le jus d\u2019orange. Ajoutez un peu de sel, du piment d\u2019Espelette, les zestes d\u2019orange et r\u00e2pez la moiti\u00e9 du gingembre.","picture_id":115278,"center_x":947,"center_y":608,"crop_x_top":0,"crop_y_top":0,"crop_x_bottom":1920,"crop_y_bottom":1080,"credits":"","author_name":"Petits plats en \u00e9quilibre","is_season":0,"is_vegan":false,"lactose_free":1,"gluten_free":0,"main_video_id":641507,"brand":{"id":294,"name":"Petits plats en \u00e9quilibre","user_id":20360835,"website_url":"https:\/\/petitsplatsenequilibre.fr\/","custom_url":null,"logo":"https:\/\/assets.afcdn.com\/recipe\/20200514\/111245_w112cxt0cyt0cxb1080cyb1080.png","url_pixel_count":null,"modification_date":"2021-01-18T14:48:52+01:00","search_sponsored_start_index":5,"show_nutri_score":false,"show_environment_score":false,"taboola_enabled":true,"keywords":null,"sponso_indexes":[5,10]},"cost":{"id":1,"name":"bon march\u00e9","token":"bonmarche"},"difficulty":{"id":2,"name":"facile","token":"facile"},"validation_date":"2020-11-03T19:14:50+01:00"}}]
+ });
+ </script>
+<script type="text/javascript">
+ var appAufStickyCol = appAufStickyCol || {};
+ document.addEventListener("DOMContentLoaded", function() {
+ appAufStickyCol["sticky-col-right"] = new AfStickyCol();
+ appAufStickyCol["sticky-col-right"].init({
+ id: "sticky-col-right",
+ superParent: true,
+ bottomCtn: document.getElementById("recipe-search__col-right"),
+ forceXRedraw : true
+ });
+ });
+ </script>
+<script type="text/javascript">
+ af_addEvent(window, 'beforeunload', function () {
+ var srcNodeList = document.querySelectorAll('[src]');
+ for (var i = 0; i < srcNodeList.length; ++i) {
+ var url = srcNodeList[i].getAttribute('src');
+ if (url.substring(0,5) == 'http:') {
+ afLogger.logError('Insecure call to: ' + url);
+ }
+ }
+ });
+</script>
+<script type="text/javascript">
+ af_addEvent(window, 'load', function() {
+ if (typeof af_ua_trackEvent !== 'undefined') {
+ if (location.href.indexOf('login_ok') != -1) {
+ af_ua_trackEvent('Personal account', 'Account connection', 'Confirmation', '');
+ }
+ if (location.href.indexOf('registration_ok') != -1) {
+ af_ua_trackEvent('Personal account', 'Account registration', 'Confirmation', '');
+ }
+ } else {
+ afLogger.logError('Failed to push Register/Login event to GA: missing ga.js', 'JS', false, {sampleRate: 100});
+ }
+ });
+</script>
+<script type="text/javascript">
+ af_addEvent(window, 'load', function() {
+ var header = document.getElementById('header');
+ if (header && header.offsetHeight > 1000) {
+ var concatLinks = document.querySelectorAll("link[href*='concat.css']");
+ var concatUrls = [];
+
+ for (var i = 0; i < concatLinks.length; i++) {
+ concatUrls.push(concatLinks[i].href);
+ }
+ afLogger.logError('CSS fucked - check concat ', 'PHP', false, {sampleRate: 100, stacktrace: concatUrls.join('')});
+ }
+ });
+</script>
+<script type="text/javascript">
+ window.afPageSpeedLogger = new AfPageSpeedLogger();
+ </script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX2D67" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"NRJS-aedcd3c03fde7213bd0","applicationID":"790078044","transactionName":"YAQHMUtYWUQDWkVaC1lOJAZNUFhZTUtUUA1HBEoXXFpeRwdqVFIWVAkkFklB","queueTime":0,"applicationTime":168,"atts":"TEMERwNCSko=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
