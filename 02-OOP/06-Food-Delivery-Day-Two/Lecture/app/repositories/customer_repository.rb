@@ -11,10 +11,10 @@ class CustomerRepository < BaseRepository
   end
 
   def csv_headers
-    ['id', 'name']
+    ['id', 'name', 'address']
   end
 
   def element_to_row(element)
-    [element.id, element.name]
+    [element.id, element.name, element.address]
   end
 end

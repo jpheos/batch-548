@@ -1,70 +1,150 @@
-¡Vamos a construir un programa de entrega de comida a domicilio (Food Delivery) para un restaurante!
+Asegurate de ejecutar lo comandos anteriores 👆
 
-Aquí están las primeras **acciones de usuario** de nuestra aplicación:
+**IMPORTANTE** 👇
 
-- Como usuario, puedo agregar un nuevo plato
-- Como usuario, puedo mostrar la lista de todos los platos
-- Como usuario, puedo agregar a un cliente nuevo
-- Como usuario, puedo mostrar la lista de todos los clientes
+Copia el código de ayer:
 
-**ATENCIÓN**
+```bash
+cp -r ../../05-Food-Delivery-Day-One/01-Food-Delivery/{app,data,app.rb,router.rb} . # trailing dot is important
+```
 
-El programa está diseñado para **un solo restaurante** así que no hay necesidad de que entregues (sin intención de jugar con los términos 😉) una aplicación multi restaurante (e.g. no se necesita un modelo `Restaurant`).
-
-El programa está hecho **solamente para los empleados del restaurante** así que no es necesario diseñar una interfaz de usuario para los clientes.
-
-Por ende los primeros elementos de nuestro programa son:
-- **Meals**: Platos
-- **Customers**: Clientes
-
-## 1 - Platos (Meals)
-
-### 1.1. - Modelo de Platos
-
-Nuestro restaurante vende platos, así que necesitamos una representación de lo es un plato.
-
-Cada plato tiene un número de identidad (id), un nombre (name) y un precio (price).
-
-Escribe el código para implementar esto y haz el crash test de tu modelo. Luego testea tu código corriendo `rake meal`.
-
-¿Tienes todo en verde? ¡Genial! Es hora de hacer `git add`, `commit` y `push`.
-
-### 1.2 Repositorio de platos
-
-Ya que tenemos un modelo de los platos, necesitamos un repositorio para almacenarlos.
-
-El repositorio se inicializa con una ruta a un archivo CSV, lee/escribe los platos de dicho archivo y los almacena como objetos en un arreglo (array). A continuación se muestra el comportamiento que queremos que tenga el repositorio:
-- Agregar un nuevo plato
-- Recuperar todos los platos
-- Buscar un plato específico a través de su número de identidad (id).
-
-Escribe el código para implementar esto y haz el crash test de tu repositorio. Debes crear tu propio archivo CSV `meals.csv` dentro de la carpeta `data`. Luego testea tu código corriendo `rake meal`.
-
-¿Tienes todo en verde? ¡Bien! Es hora de hacer `git add`, `commit` y `push`.
-
-### 1.3 - Ruta y aplicación
-
- Todavía no hemos corrido la aplicación. Para eso necesitamos un ruteador (router) y también es necesario completar el archivo `app.rb`.
-
-El ruteador es el responsable de la visualización de las tareas que el/la usuario/a puede hacer y de direccionar sus decisiones a la acción en el controlador correspondiente. El archivo `app.rb` es el responsable de pedir los archivos necesarios, de instanciar un ruteador y de ejecutar su método `run` para correr la aplicación.
-
-Para poder implementar esto debes completar los archivos `router.rb` y `app.rb`. Si tienes algún problema y necesitas un poco de inspiración, te recomendamos regresar a [Cookbook Day 2](https://kitt.lewagon.com/camps/<user.batch_slug>/challenges?path=02-OOP%2F04-Cookbook-Day-Two%2F01-Cookbook-Advanced) y descargar la solución. **No tienes que instanciar el ruteador con el controlador** ya que todavía no lo tenemos. Simplemente haz que se muestre el término `TODO` cuando el/la usuario/a selecciona una tarea.
-
-No hay rake en esta parte. Corre la aplicacion ejecutando el siguiente comando en la Terminal:
+Luego, comprueba que todo todavía funciona antes de empezar iniciando tu aplicación:
 
 ```bash
 ruby app.rb
 ```
 
-¿Todo funciona bien? ¡Excelente! Es hora de hacer `git add`, `commit` y `push`.
+Entonces, finalmente, puedes ejecutar:
 
-### 1.4 - Controlador para los platos
+```bash
+rake
+```
 
-Ahora vayamos al controlador. Las siguientes son las **acciones de usuario** que queremos implementar:
-- `add`: agregar un plato
-- `list`: mostrar la lista de todos los platos
+Ahora continúa con tu propio código y sigue agregando funcionalidades al ruteador y haciendo que el `rake` siga saliendo verde.
 
-¡Recuerda que el papel del controlador es delegar y coordinar el trabajo de los demás elementos de tu aplicación (modelo, repositorio y vista)!
+¡Agreguemos más funcionalidades a nuestro programa de Entrega a Domicilio (Food Delivery)!
+
+Aquí están todas la **acciones de usuario** de nuestra aplicación:
+[] Como empleado, puedo iniciar sesión
+[X] Como gerente, puedo agregar un nuevo plato
+[X] Como gerente, puedo mostrar la lista de todos platos
+[X] Como gerente, puedo agregar un nuevo cliente
+[X] Como gerente, puedo mostrar la lista de todos clientes
+[X] Como gerente, puedo agregar un nuevo pedido
+[X] Como gerente, puedo mostrar la lista de todos los pedidos no entregados
+[X] Como repartidor, puedo marcar uno de mis pedidos como entregado
+[X] Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados
+
+Por lo tanto, hay dos nuevos componentes:
+- **Employees**: empleados
+- **Orders**: pedidos
+
+## 1 - `Employee`
+
+### 1.1 - Modelo de `Employee`
+
+Nuestro restaurante tiene dos tipos de empleados: **gerentes** y **repartidores**. Ambos tienen número de identificación (id), usuario y contraseña. Sin embargo, tienen privilegios diferentes dependiendo de sus roles.
+
+Escribe el código para implementar esto y haz el crash test del modelo en `irb`. Luego testea tu código corriendo `rake employee`.
+
+¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+
+### 1.2 - Repositorio de `Employee`
+
+Ahora que tenemos un modelo que representa a nuestros empleados, necesitamos un repositorio para almacenarlos.
+
+Este repositorio se inicializa con una ruta de archivo CSV. Tiene una lógica de **solo lectura** ya que solo el administrador de nuestra aplicación puede crear cuentas (no es necesario crear un método `add`). La interfaz de este repositorio permite lo siguiente:
+- Recuperar a todos los repartidores del repositorio
+- Encontrar a un empleado específico gracias a su número de identificación (id)
+- Encontrar a un empleado específico gracias a su usuario
+
+Escribe el código para implementar esto y haz el crash test de tu repositorio en irb. Debes crear tu propio archivo CSV `employees.csv` dentro de la carpeta `data`. Luego testea tu código corriendo `rake employee`.
+
+¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+
+### 1.3 - Controlador de `Session`
+
+Implementemos una lógica de **login** en nuestra aplicación.
+
+Queremos tener dos menús en el ruteador: uno que muestre la lista de tareas para los gerentes y otra que muestre las de los repartidores. También queremos direccionar la selección del empleado a la acción en el controlador correspondiente.
+
+Para ello introduciremos la noción de una **session**. A nivel del ruteador, almacenaremos al usuario logueado en una sesión.
+
+La secuencia de inicio de sesión debe ser de la siguiente manera:
+
+```bash
+> username?
+paul
+> password?
+blablabla
+Wrong credentials... Try again!
+> username?
+paul
+> password?
+secret
+Welcome Paul!
+```
+
+Después de haber iniciado sesión, verás un tablero de comando **de acuerdo a tu rol en la empresa**.
+
+Escribe el código para implementar este comportamiento.
+
+No hay rake para esta parte del desafío. Corre tu aplicación ejecutando el siguiente comando en la Terminal:
+
+```bash
+ruby app.rb
+```
+
+¿Todo está funcionando bien? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+
+## 2 - `Order`
+
+### 2.1 - Modelo de `Order`
+
+Nuestro restaurante toma pedidos, así que tenemos que representar lo que es un pedido.
+
+
+El pedido es lo que une a todos los elementos. Cada pedido tiene un número de identificación (id), un plato, un cliente, un empleado y un booleano `delivered` para registrar si ha sido entregado.
+
+Escribe el código para implementar esto y haz el crash test del modelo en `irb`. Luego testea tu código corriendo `rake order`.
+
+¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+
+### 2.2 - Repositorio de `Order`
+
+Ahora que ya tenemos un modelo que representa a nuestros pedidos, tenemos la necesidad de un repositorio para almacenarlos.
+
+Este repositorio se inicializa con una ruta de archivo CSV, lee/escribe los pedidos del archivo CSV y los almacena en memoria. La interfaz del repositorio permite lo siguiente:
+- Agregar un nuevo pedido al repositorio
+- Recuperar todos los pedidos no entregados del repositorio
+
+Ya que nuestro pedido tiene las **instancias** `meal`, `customer` y `employee`, tenemos que inicializar nuestro repositorio de pedidos, el de los platos (meals), el de los clientes (customers) y el de los empleados (employees).
+
+Escribe el código para implementar esto y haz el crash test del repositorio en `irb`. Tienes que crear tu propio archivo  CSV `orders.csv` dentro de la carpeta `data`. Luego testea tu código corriendo `rake order`.
+
+**Importante**: los tests de `order_repository` que corre `rake` **solo funcionan si defines los parámetros en `#initialize` en el mismo orden que el que está en los tests**:
+
+```ruby
+class OrderRepository
+  def initialize(orders_csv_path, meal_repository, customer_repository, employee_repository)
+    # [...]
+  end
+
+  # [...]
+end
+```
+
+¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+
+### 2.3 Controlador de `Order`
+
+Vayamos al controlador. Las siguientes son las **acciones de usuario** que queremos implementar:
+- Como gerente, puedo agregar un pedido
+- Como gerente, puedo mostrar la lista de todos los pedidos que no han sido entregados
+- Como repartidor, puedo marcar uno de mis pedidos como entregado
+- Como repartidor, puedo mostrar la lista de todos mis pedidos no entregados
+
+¡Recuerda que el rol del controlador es delegar el trabajo a los otros componentes de nuestra aplicación (modelo, repositorio y vistas)!
 
 Comienza escribiendo el **pseudocódigo** separando cada acción de usuario en pasos básicos y delegando cada uno de ellos a un componente (modelo, repositorio, vista). Luego escribe el código correspondiente. Crea la vista y escribe su código paso por paso.
 
@@ -74,78 +154,42 @@ Para testear el controlador, conectalo a tu aplicación instanciandolo en `app.r
 ruby app.rb
 ```
 
-`rake meal` también te debería ser de utilidad en estos pasos. ¡Sigue la guía!
+`rake order` también te debería ser de utilidad en estos pasos. ¡Sigue la guía!
 
-Asegurate que las dos acciones de usuarios para platos funcionen bien antes de pasar a la siguiente funcionalidad.
+Asegurate que las cuatro acciones de usuario para pedidos funcionen bien antes de trabajar en la siguiente funcionalidad.
 
-¿Todo está en verde? ¡OK! Es hora de hacer `git add`, `commit` y `push`.
+**Importante**: los tests de `orders_controller` que corre `rake` **solo funcionan si defines los parámetros en `#initialize` en el mismo orden que el que está en los tests**:
 
-## 2 - Clientes
+```ruby
+class OrdersController
+  def initialize(meal_repository, customer_repository, employee_repository, order_repository)
+    # [...]
+  end
 
-### 2.1 - Modelo del cliente
-
-Nuestro restaurante le vende a sus clientes,  así que necesitamos una representación de lo es un cliente (customer).
-
-Cada cliente tiene un número de identificación (id), un nombre (name) y una dirección (address).
-
-Escribe el código para implementar esto y haz el crash test de tu modelo. Luego testea tu código corriendo `rake customer`.
-
-¿Todo está en verde? ¡Bravo! Es hora de hacer `git add`, `commit` y `push`.
-
-### 2.2 - Repositorio del cliente
-
-Ya que ahora tenemos un modelo que representa a los clientes, necesitamos un repositorio para almacenarlos.
-
-El repositorio se inicializa con una ruta a un archivo CSV, lee/escribe los clientes de dicho archivo y los almacena como objetos en un arreglo (array). A continuación se muestra el comportamiento que queremos que tenga el repositorio:
-- Agregar un nuevo cliente
-- Recuperar todos los clientes
-- Buscar un cliente específico a través de su número de identificación (id).
-
-Escribe el código para implementar esto y haz el crash test del repositorio. Tienes que crear tu propio archivo `customers.csv`  dentro de la carpeta `data`. Luego prueba tu código corriendo `rake customer`.
-
-¿Todo está en verde? ¡Bravo! Es hora de hacer `git add`, `commit` y `push`.
-
-### 2.3 - Controlador del cliente
-
-Vayamos al controlador. Aquí están las **acciones de usuario** que queremos implementar:
-- `add`: agregar un nuevo cliente
-- `list`: mostrar la lista de todos los clientes
-
-¡Recuerda que el rol del controlador es delegar el trabajo a los otros elementos de tu aplicación (modelo, repositorio y vista)!
-
-Comienza escribiendo el **pseudocodigo** separando cada acción de usuario en pasos básicos y delegando cada uno de ellos a un componente (modelo, repositorio, vista). Luego escribe el código correspondiente. Crea la vista y escribe su código paso por paso.
-
-Para testear el controlador, conectalo a tu aplicación instanciandolo en `app.rb` y pasándoselo al ruteador. Luego haz el crash test del código corriendo tu aplicación:
-
-```bash
-ruby app.rb
+  # [...]
+end
 ```
 
-`rake customer` también te debería ser de utilidad en estos pasos. ¡Sigue la guia!
+**Importante**: ya que los **ids** no necesariamente empiezan en 1 y no son necesariamente continuos, le preguntaremos al/a la usuario/a por índices (indexes) y así mejorar la experiencia de usuario.
 
-Asegurate que las dos acciones de usuarios para clientes funcionen bien antes de pasar a la siguiente funcionalidad.
-
-¿Todo está en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
+¿Todo en verde? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
 ## 3 - Opcionales
 
-### 3.1 - Implementa las acciones `edit` y `destroy` para los platos y los clientes.
+### 3.1 - Implementa las acciones `edit` y `destroy` para los pedidos.
 
-Recuerda que hasta ahora los usuarios de tu aplicación no pueden editar o borrar un plato o cliente.
+Por ahora en nuestra aplicación los gerentes aún no pueden editar o borrar pedidos actuales.
 
-Implementa las siguientes acciones de usuario adicionales:
-- Como usuario puedo editar un plato actual
-- Como usuario puedo borrar un plato actual
-- Como usuario puedo editar un cliente actual
-- Como usuario puedo borrar un cliente actual
+Implementa las siguientes acciones de usuarios adicionales:
+- Como gerente, puedo editar un pedido actual
+- Como gerente, puedo borrar un pedido actual
 
-¿Listo? Es hora de hacer `git add`, `commit` y `push`.
+¿Listo? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
-### 3.2 - Refactorización de repositorios con el concepto de  herencia
+### 3.2 Oculta la contraseña del/de la usuario/a
 
-`MealRepository` y `CustomerRepository` tienen mucho en común, ¿cierto? Para mantener el principio de no repetirse a uno mismo [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) tenemos que definir la clase padre `BaseRepository` la cual tendrá todo el comportamiento compartido que `MealRepository` y `CustomerRepository` heredarán.
-Escribe el código para esto. Como es una refactorización no hay un nuevo test. Si tu `rake` estuvo todo verde anteriormente, ¡deberá estarlo después!
+Por ahora, la contraseña se guarda directamente en el CSV y es cualquier persona la puede ver ¿Crees que esto es buena idea? ¿Cómo podemos cambiar esto?
 
-¿Listo? Es hora de hacer `git add`, `commit` y `push`.
+¿Listo? ¡Qué bueno! Es hora de hacer `git add`, `commit` y `push`.
 
-¡Ya terminaste por hoy!
+¡Has terminado el Food Delivery!

@@ -10,4 +10,10 @@ class CustomersView
     print '> '
     gets.chomp
   end
+
+  def ask_for_address
+    puts "name ?"
+    print '> '
+    gets.chomp
+  end
 end
