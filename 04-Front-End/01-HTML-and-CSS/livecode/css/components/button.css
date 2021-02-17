@@ -1,0 +1,8 @@
+.btn {
+  padding: 8px 4px;
+  background-color: #FFF;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  opacity: 0;
+}
