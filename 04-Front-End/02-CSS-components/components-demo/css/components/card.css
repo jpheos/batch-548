@@ -1,0 +1,30 @@
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-category {
+  background-image: url(../../images/breakfast.jpg);
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  color: white;
+}
+
+.card-category h3 {
+  font-size: 32px;
+  text-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+}
+
+.card-product {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 320px;
+}
