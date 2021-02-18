@@ -1,0 +1,26 @@
+.alert {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 16px rgba(0,0,0,0.2);
+  margin-bottom: 48px;
+}
+
+.alert p {
+  margin: 0;
+}
+
+.alert-green {
+  border: 2px solid #6ddccf;
+}
+
+.alert-red {
+  border: 2px solid #91091e;
+}
+
+.alert-blue {
+  border: 2px solid #1687a7;
+}
