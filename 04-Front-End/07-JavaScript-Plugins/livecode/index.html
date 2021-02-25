@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Playground - JavaScript 101</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
+
+    <style>
+      #results li {
+        cursor: grab;
+      }
+
+      #results li:active {
+        cursor: grabbing;
+      }
+
+      #results li.ghost {
+        filter: grayscale(0.5);
+        opacity: 0.5;
+      }
+
+      #preview, #editor {
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      #preview {
+        min-height: 100px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 6px 12px;
+        text-align: left;
+      }
+
+      #preview img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+      <form id="search-movies" class="form-inline">
+        <input id="keyword" type="text" class="form-control ml-auto mr-2" placeholder="Find movies">
+        <input type="submit" class="btn btn-primary mr-auto ml-2" value="Search">
+      </form>
+
+      <ul id="results" class="list-inline"></ul>
+    </div>
+
+    <textarea class="form-control" id="editor" rows="4"></textarea>
+
+    <div id="preview"></div>
+
+    <select class="select2" name="state">
+      <option value="AL">Alabama</option>
+      <option value="WY">Wyoming</option>
+    </select>
+
+    <script src="main.js"></script>
+  </body>
+</html>
