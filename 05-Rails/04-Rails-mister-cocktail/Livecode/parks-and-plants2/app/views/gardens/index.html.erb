@@ -1,0 +1,7 @@
+<h1>Gardens#index</h1>
+
+<% @gardens.each do |garden| %>
+  <div>
+    <%= link_to garden.name, garden_path(garden) %>
+  </div>
+<% end %>

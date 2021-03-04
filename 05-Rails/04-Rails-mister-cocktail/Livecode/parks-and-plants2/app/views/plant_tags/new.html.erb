@@ -1,0 +1,9 @@
+
+<div class="container">
+  <p class="text-center">Choississez votre tag à ajouter sur <%= @plant.name %></p>
+  <%= simple_form_for([@plant, @plant_tag]) do |f| %>
+    <%= f.association :tag %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
